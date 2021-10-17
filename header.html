@@ -5,363 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nation Bloom</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 </head>
 
 <body>
-    <header class="header header--1" data-sticky="true">
-        <div class="header__top">
-            <div class="ps-container">
-                <div class="header__left">
-                    <div class="menu--product-categories">
-                        <div class="menu__toggle"><i class="icon-menu"></i><span> Shop by Department</span></div>
-                        <div class="menu__content">
-                            <ul class="menu--dropdown">
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i>Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a class="ps-logo" href="index.html">
-                        <h2>DentalProd</h2>
-                    </a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+        <!-- One of the primary actions on mobile is to call a business - This displays a phone button on mobile only -->
+        <div class="navbar-toggler-right">
+            <img src="assets/NationBloom.png" class="img-fluid d-block d-sm-none">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        </div>
+        <div class="collapse navbar-collapse flex-column " id="navbar">
+            <div class="flex-row justify-content-between px-3">
+                <div>
+                    <img src="assets/NationBloom.png" class="img-fluid d-none d-sm-block">
                 </div>
-                <div class="header__center">
-                    <form class="ps-form--quick-search" action="" method="get">
-                        <div class="form-group--icon hidden-true"><i class="icon-chevron-down"></i>
-                            <select class="form-control">
-                    <option value="1" selected>All</option>
-                    <option value="2">Brands </option>
-                    <option value="3">Implantology </option>
-                    <option value="4">Instruments </option>
-                  </select>
-                        </div>
-                        <input class="form-control" type="text" placeholder="I'm shopping for...">
-                        <button>Search</button>
+                <div>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
-                <div class="header__right">
-                    <div class="header__actions"><a class="header__extra" href="#"><i class="icon-chart-bars"></i><span><i>0</i></span></a><a class="header__extra" href="#"><i class="icon-heart"></i><span><i>0</i></span></a>
-                        <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
-                            <div class="ps-cart__content">
-                                <div class="ps-cart__items">
-                                    <div class="ps-product--cart-mobile">
-                                        <div class="ps-product__thumbnail">
-                                            <a href="#"><img src="https://media.dentalkart.com/catalog/product/o/r/original1.1929488.2.jpg" alt=""></a>
-                                        </div>
-                                        <div class="ps-product__content"><a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="product-default.html">Api Jaw Set And Teeth B-561</a>
-                                            <p><strong>Sold by:</strong> SHOP</p><small>1 x 59.99</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ps-cart__footer">
-                                    <h3>Sub Total:<strong>$59.99</strong></h3>
-                                    <figure><a class="ps-btn" href="shopping-cart.html">View Cart</a><a class="ps-btn" href="checkout.html">Checkout</a></figure>
-                                </div>
+                <div>
+                    <ul class="navbar-nav w-100 ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      My Account
+                    </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">My Profile</a>
+                                <a class="dropdown-item" href="#">Change Password</a>
+                                <a class="dropdown-item" href="#">Logout</a>
                             </div>
-                        </div>
-                        <div class="ps-block--user-header">
-                            <div class="ps-block__left"><i class="icon-user"></i></div>
-                            <div class="ps-block__right"><a href="my-account.html">Login</a><a href="my-account.html">Register</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <nav class="navigation">
-            <div class="ps-container">
-                <div class="navigation__left">
-                    <div class="menu--product-categories">
-                        <div class="menu__toggle"><i class="icon-menu"></i><span> Shop by Department</span></div>
-                        <div class="menu__content">
-                            <ul class="menu--dropdown">
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="menu-item-has-children has-mega-menu"><a href="#"><i class="icon-desktop"></i> Dental Brands</a>
-                                    <div class="mega-menu">
-                                        <div class="mega-menu__column">
-                                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                                            <ul class="mega-menu__list">
-                                                <li><a href="#">Air Motor</a>
-                                                </li>
-                                                <li><a href="#">Air Scaler</a>
-                                                </li>
-                                                <li><a href="#"> Autoclaves</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="navigation__right">
-                    <ul class="menu">
-                        <li><a href="index.html">Home</a>
                         </li>
-                        <li><a href="index.html">Shop</a>
-                        </li>
-                        <li><a href="index.html">About</a>
-                        </li>
-                        <li><a href="index.html">Contact</a>
-                        </li>
-                    </ul>
-                    <ul class="navigation__extra">
-                        <div class="ps-dropdown"><a href="#">US Dollar</a>
-                            <ul class="ps-dropdown-menu">
-                                <li><a href="#">Us Dollar</a></li>
-                                <li><a href="#">Euro</a></li>
-                            </ul>
-                        </div>
-                        </li>
-                        <li>
-                            <div class="ps-dropdown language">
-                                <a href="#"><img src="img/flag/en.png" alt="">English</a>
-                                <ul class="ps-dropdown-menu">
-                                    <li>
-                                        <a href="#"><img src="img/flag/germany.png" alt=""> Germany</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="img/flag/fr.png" alt=""> France</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                         </li>
                     </ul>
                 </div>
+
             </div>
-        </nav>
-    </header>
-    <header class="header header--mobile" data-sticky="true">
-        <div class="header__top">
-            <div class="header__left">
-                <p>Welcome to DentalProd Online Shopping Store !</p>
-            </div>
-            <div class="header__right">
-                <ul class="navigation__extra">
-                    <div class="ps-dropdown"><a href="#">US Dollar</a>
-                        <ul class="ps-dropdown-menu">
-                            <li><a href="#">Us Dollar</a></li>
-                            <li><a href="#">Euro</a></li>
-                        </ul>
-                    </div>
-                    </li>
-                    <li>
-                        <div class="ps-dropdown language">
-                            <a href="#"><img src="img/flag/en.png" alt="">English</a>
-                            <ul class="ps-dropdown-menu">
-                                <li>
-                                    <a href="#"><img src="img/flag/germany.png" alt=""> Germany</a>
-                                </li>
-                                <li>
-                                    <a href="#"><img src="img/flag/fr.png" alt=""> France</a>
-                                </li>
-                            </ul>
+
+
+            <ul class="navbar-nav justify-content-center w-100 bg-secondary px-3">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Dropdown 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <div class="header">
+                            <h2>Mega Menu</h2>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="navigation--mobile">
-            <div class="navigation__left">
-                <a class="ps-logo" href="index.html">
-                    <h2>DentalProd</h2>
-                </a>
-            </div>
-            <div class="navigation__right">
-                <div class="header__actions">
-                    <div class="ps-cart--mini"><a class="header__extra" href="#"><i class="icon-bag2"></i><span><i>0</i></span></a>
-                        <div class="ps-cart__content">
-                            <div class="ps-cart__items">
-                                <div class="ps-product--cart-mobile">
-                                    <div class="ps-product__thumbnail">
-                                        <a href="#"><img src="https://media.dentalkart.com/catalog/product/o/r/original1.1929488.2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="ps-product__content"><a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="product-default.html">Api Jaw Set And Teeth B-561</a>
-                                        <p><strong>Sold by:</strong> SHOP</p><small>1 x 59.99</small>
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="column">
+                                <h3>Category 1</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
                             </div>
-                            <div class="ps-cart__footer">
-                                <h3>Sub Total:<strong>$59.99</strong></h3>
-                                <figure><a class="ps-btn" href="shopping-cart.html">View Cart</a><a class="ps-btn" href="checkout.html">Checkout</a></figure>
+                            <div class="column">
+                                <h3>Category 2</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                            <div class="column">
+                                <h3>Category 3</h3>
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
                             </div>
                         </div>
                     </div>
-                    <div class="ps-block--user-header">
-                        <div class="ps-block__left"><i class="icon-user"></i></div>
-                        <div class="ps-block__right"><a href="my-account.html">Login</a><a href="my-account.html">Register</a></div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="ps-search--mobile">
-            <form class="ps-form--search-mobile" action="" method="get">
-                <div class="form-group--nest">
-                    <input class="form-control" type="text" placeholder="Search something...">
-                    <button><i class="icon-magnifier"></i></button>
-                </div>
-            </form>
-        </div>
-    </header>
-    <div class="ps-panel--sidebar" id="cart-mobile">
-        <div class="ps-panel__header">
-            <h3>Shopping Cart</h3>
-        </div>
-        <div class="navigation__content">
-            <div class="ps-cart--mobile">
-                <div class="ps-cart__content">
-                    <div class="ps-product--cart-mobile">
-                        <div class="ps-product__thumbnail">
-                            <a href="#"><img src="img/products/clothing/7.jpg" alt=""></a>
-                        </div>
-                        <div class="ps-product__content"><a class="ps-product__remove" href="#"><i class="icon-cross"></i></a><a href="product-default.html">MVMTH Classical Leather Watch In Black</a>
-                            <p><strong>Sold by:</strong> YOUNG SHOP</p><small>1 x $59.99</small>
-                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </div>
-                <div class="ps-cart__footer">
-                    <h3>Sub Total:<strong>$59.99</strong></h3>
-                    <figure><a class="ps-btn" href="shopping-cart.html">View Cart</a><a class="ps-btn" href="checkout.html">Checkout</a></figure>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ps-panel--sidebar" id="navigation-mobile">
-        <div class="ps-panel__header">
-            <h3>Categories</h3>
-        </div>
-        <div class="ps-panel__content">
-            <ul class="menu--mobile">
-                <li class="menu-item-has-children has-mega-menu"><a href="#">Dental
-              Brand</a><span class="sub-toggle"></span>
-                    <div class="mega-menu">
-                        <div class="mega-menu__column">
-                            <h4>Equipments<span class="sub-toggle"></span></h4>
-                            <ul class="mega-menu__list">
-                                <li><a href="#">Air Motor</a>
-                                </li>
-                                <li><a href="#">Air Scaler</a>
-                                </li>
-                                <li><a href="#"> Autoclaves</a>
-                                </li>
-                            </ul>
-                        </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown link
+            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
             </ul>
+
+
         </div>
-    </div>
-    <div class="navigation--list">
-        <div class="navigation__content"><a class="navigation__item ps-toggle--sidebar" href="#menu-mobile"><i class="icon-menu"></i><span> Menu</span></a><a class="navigation__item ps-toggle--sidebar" href="#navigation-mobile"><i class="icon-list4"></i><span> Categories</span></a>
-            <a
-                class="navigation__item ps-toggle--sidebar" href="#search-sidebar"><i class="icon-magnifier"></i><span> Search</span></a><a class="navigation__item ps-toggle--sidebar" href="#cart-mobile"><i class="icon-bag2"></i><span> Cart</span></a></div>
-    </div>
-    <div class="ps-panel--sidebar" id="search-sidebar">
-        <div class="ps-panel__header">
-            <form class="ps-form--search-mobile" action="" method="get">
-                <div class="form-group--nest">
-                    <input class="form-control" type="text" placeholder="Search something...">
-                    <button><i class="icon-magnifier"></i></button>
-                </div>
-            </form>
-        </div>
-        <div class="navigation__content"></div>
-    </div>
-    <div class="ps-panel--sidebar" id="menu-mobile">
-        <div class="ps-panel__header">
-            <h3>Menu</h3>
-        </div>
-        <div class="ps-panel__content">
-            <ul class="menu--mobile">
-                <li><a href="index.html">Home</a>
-                </li>
-                <li><a href="index.html">Shop</a>
-                </li>
-                <li><a href="index.html">About</a>
-                </li>
-                <li><a href="index.html">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+    </nav>
 </body>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </html>
