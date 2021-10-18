@@ -194,6 +194,10 @@ footer {
     border-radius: 0;
 }
 
+.nav-link {
+    color: #333;
+}
+
 
 /* Medium devices (tablets, 768px and up) 
   The navbar toggle appears at this breakpoint */
@@ -216,34 +220,50 @@ footer {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: #333;
     padding: 14px 16px;
     background-color: inherit;
     font: inherit;
     margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    color: #076507;
 }
 
 .dropdown-content {
     display: none;
     position: fixed;
     background-color: #f9f9f9;
-    width: 100%;
+    width: 50%;
     left: 0;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
     z-index: 1;
+    border: 1px solid #076507;
+    margin: 0 10px;
+    /* padding: 10px; */
+}
+
+.dropdown-content a {
+    color: #333;
 }
 
 .dropdown-content .header {
-    background: red;
     padding: 16px;
     color: white;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.list-style-none {
+    list-style: none;
+}
+
+.bg-gray {
+    background: #ecebeb;
 }
