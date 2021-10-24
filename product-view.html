@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nation Bloom</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="css/custom.css" /> -->
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-light sticky-top p-1">
+        <div class="container">
+            <img src="assets/nationbloom_logo_SVG.svg" class="img-fluid brand-logo">
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-4 border-end">
+                    <div class="d-flex flex-column justify-content-center">
+                        <div class="main_image"> <img src="assets/flower1.png" id="main_product_image" width="350"> </div>
+                        <div class="thumbnail_images">
+                            <ul id="thumbnail">
+                                <li><img onclick="changeImage(this)" src="assets/flower1.png" width="70"></li>
+                                <li><img onclick="changeImage(this)" src="assets/offer1.png" width="70"></li>
+                                <li><img onclick="changeImage(this)" src="assets/pebbles.png" width="70"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="p-3 right-side">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Plants</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Flowering Plants</a></li>
+                                <li class="breadcrumb-item active text-success" aria-current=" page ">Plants</li>
+                            </ol>
+                        </nav>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <h3>IIlana</h3> <span class="heart " title="Add to Wishlist "><i class="fa fa-heart "></i></span>
+                        </div>
+                        <div class="mt-2 pr-3 content ">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        </div>
+                        <h3>$430.99</h3>
+                        <div class="ratings d-flex flex-row align-items-center">
+                            <div class="d-flex flex-row"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> </div> <span>441 reviews</span>
+                        </div>
+                        <div class="search-option mt-3">
+                            <div class="d-flex gap-1 ">
+                                <small>Delivery</small>
+                                <input type="text " name=" "> Change
+                            </div>
+                            <p class="mt-1">Rs. 79 delivery charges on your lcoation</p>
+                        </div>
+                        <div class="buttons d-flex flex-row my-4 gap-3 ">
+                            <a href="" class="btn btn-warning  rounded-0 btn-block fw-bold px-5">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-success rounded-0 fw-bold">Buy Now</a>
+                        </div>
+
+                        <p>Note : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" my-3 ">
+            <div class="row ">
+                <div class="MultiCarousel " data-items="1,2,4,6 " data-slide="1 " id="MultiCarousel " data-interval="1000 ">
+                    <div class="d-flex justify-content-between ">
+                        <h2 class="font-weight-light ">Super Saver Plant Packs</h2>
+                        <div class=" ">
+                        </div>
+                    </div>
+                    <button class="btn rightLst "><i class="fa fa-angle-right "></i></button>
+                    <button class="btn leftLst "><i class="fa fa-angle-left "></i></button>
+                    <div class="MultiCarousel-inner ">
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="item ">
+                            <div class="pad15 ">
+                                <div>
+                                    <img src="assets/flower1.png " class="img-fluid w-100 ">
+                                </div>
+                                <p class="mt-1 "> <strong> Sort of 5 enhanced roses</strong></p>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <p><strong>₹ 1000</strong></p>
+                                    <p class="text-muted "><strike>₹ 1200</strike></p>
+                                </div>
+                                <button class="btn btn-warning btn-block fw-bold w-100 border-0 rounded-0 ">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="bg-white mt-3 ">
+        <div class="container-fluid ">
+            <div class="row py-4 px-4 ">
+                <div class="col-md-3 ">
+                    <div class="d-flex align-items-center gap-1 ">
+                        <img class="img-fluid " src="assets/ask_icon.png ">
+                        <div class="px-2 ">
+                            <p>Ask any gardening related query, Get answer within 24 hours</p>
+                            <a href=" " class="text-dark ">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="d-flex align-items-center gap-1 ">
+                        <img class="img-fluid " src="assets/check_icon.png ">
+                        <div class="px-2 ">
+                            <p>Check nursery experts recommendations, top 10 list </p>
+                            <a href=" " class="text-dark ">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="d-flex align-items-center gap-1 ">
+                        <img class="img-fluid " src="assets/web_icon.png ">
+                        <div class="px-2 ">
+                            <p>Read customer blogs, suggestions, tips & experiences on gardening in India</p>
+                            <a href=" " class="text-dark ">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="d-flex align-items-center gap-1 ">
+                        <img class="img-fluid " src="assets/tv_icon.png ">
+                        <div class="px-2 ">
+                            <p>Learn gardening & plants care through video lessons created by garden lovers</p>
+                            <a href=" " class="text-dark ">Click here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted ">
+        <!-- Section: Links  -->
+        <section class="pt-1 ">
+            <div class="container-fluid text-center text-md-start mt-5 ">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            More about Nationbloom.com
+                        </h6>
+                        <p align="justify ">
+                            Nationbloom is a platform to address all garden related needs across india through multiple channels Our Vision to make spaces around us green & healthy place to live. Our Mission to develop an easy-to-use, affordable & quality driven platform that fulfils
+                            all gardening related needs across India.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <p class="m-0 p-0 ">Follow us on</p>
+                            <section class=" text-center ">
+                                <!-- Facebook -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-facebook-f "></i></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-google "></i></a>
+
+                                <!-- Instagram -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-instagram "></i></a>
+
+                                <!-- Linkedin -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-linkedin-in "></i></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-google "></i></a>
+
+                            </section>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            Let us help you
+                        </h6>
+                        <p>
+                            <a href="#! " class="text-reset ">Shipping & Delivery Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Cancellation Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Disclaimer Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            Contact us
+                        </h6>
+                        <p>
+                            Mail us : support@nationbloom.com
+                        </p>
+                        <p> Call us : +91 9595 419 429</p>
+                        <p> Address : Sasane Nagar, Hadapsar, Pune - 411028
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4 ">
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">Subscribe to get special offers!</h6>
+                        <div class="bg-success px-3 py-4 ">
+                            <div class="d-flex align-items-center gap-1 ">
+                                <img src="assets/newsletter.png ">
+                                <h4 class="text-light ">Subscribe Newsletter</h4>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 p-1 mt-2 ">
+                                <input type="text " class="form-control " placeholder="Enter your email ">
+                                <button class="btn btn-warning rounded-circle shadow text-light go-btn fw-bold ">Go</button>
+                            </div>
+                        </div>
+                        <p class="mt-2 ">We absolutely promise <span class="text-uppercase ">no Spam</span></p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-success text-light ">
+            Copyright © 2017 Nationbloom. All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+<script src="//code.jquery.com/jquery-1.11.1.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+<script src="js/owl_carasual.js "></script>
+<script>
+    function changeImage(element) {
+        var main_prodcut_image = document.getElementById('main_product_image');
+        main_prodcut_image.src = element.src;
+    }
+</script>
+
+</html>

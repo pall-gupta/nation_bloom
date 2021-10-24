@@ -42,10 +42,10 @@ $(document).ready(function() {
                 incno = itemsSplit[2];
                 itemWidth = sampwidth / incno;
             } else if (bodyWidth >= 768) {
-                incno = itemsSplit[1];
+                incno = itemsSplit[2];
                 itemWidth = sampwidth / incno;
             } else {
-                incno = itemsSplit[0];
+                incno = itemsSplit[1];
                 itemWidth = sampwidth / incno;
             }
             $(this).css({
