@@ -48,10 +48,12 @@
     /* Legacy iOS */
 }
 
+html,
 body {
     background-color: #ecebeb;
     font-family: 'Helvetica';
     overflow-x: hidden;
+    position: relative;
 }
 
 p {
@@ -201,6 +203,7 @@ footer {
     /* top: calc(50% - 20px); */
     box-shadow: none;
     padding: 5px;
+    font-size: 24px;
 }
 
 .MultiCarousel .leftLst {
@@ -265,6 +268,9 @@ footer {
     .main_image {
         width: auto;
         height: auto;
+    }
+    .mb-none {
+        display: none;
     }
 }
 
@@ -385,4 +391,12 @@ footer {
 
 .right-side {
     position: relative
+}
+
+.box-shadow-none {
+    box-shadow: none !important;
+}
+
+.btn:focus {
+    box-shadow: none !important;
 }
