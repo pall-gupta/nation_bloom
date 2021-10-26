@@ -120,7 +120,7 @@ footer {
 }
 
 .login {
-    width: 100%;
+    width: 40%;
     padding: 2rem;
 }
 
@@ -131,10 +131,15 @@ footer {
     font-size: 14px;
     color: #000;
     border-radius: 0;
+    padding: 0;
 }
 
 .form-control:focus {
     box-shadow: none;
+}
+
+.form-floating>label {
+    padding: 15px 0px;
 }
 
 .sm-links {
@@ -259,7 +264,7 @@ footer {
         position: fixed;
     }
     .login {
-        width: 45%;
+        width: 100%;
         padding: 2rem;
     }
     .brand-logo {
