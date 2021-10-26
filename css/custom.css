@@ -272,6 +272,9 @@ footer {
     .mb-none {
         display: none;
     }
+    .mb-p-0 {
+        padding: 0;
+    }
 }
 
 .dropdown {
