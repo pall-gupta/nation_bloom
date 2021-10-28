@@ -118,7 +118,7 @@ footer {
 .MultiCarousel {
     float: left;
     overflow: hidden;
-    padding: 15px;
+    /* padding: 15px; */
     width: 100%;
     position: relative;
 }
@@ -126,7 +126,7 @@ footer {
 .MultiCarousel .MultiCarousel-inner {
     transition: 1s ease all;
     float: left;
-    margin-top: -35px;
+    margin-top: -50px;
 }
 
 .MultiCarousel .MultiCarousel-inner .item {
