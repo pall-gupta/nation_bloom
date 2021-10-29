@@ -102,18 +102,17 @@
 // });
 $(document).ready(function() {
 
-    var owl = $("#owl-demo");
+    var owl = $(".owl-carousel");
 
     owl.owlCarousel({
 
-        items: 6, //10 items above 1000px browser width
+        items: 6, //10 items abo ve 1000px browser width
         itemsDesktop: [1000, 6], //5 items between 1000px and 901px
         itemsDesktopSmall: [900, 3], // 3 items betweem 900px and 601px
         itemsTablet: [600, 2], //2 items between 600 and 0;
         itemsMobile: false // itemsMobile disabled - inherit from itemsTablet option
 
     });
-
     // Custom Navigation Events
     $(".next").click(function() {
         owl.trigger('owl.next');
@@ -128,5 +127,28 @@ $(document).ready(function() {
         owl.trigger('owl.stop');
     })
 
+    var owl2 = $(".owl-carousel-2");
 
+    owl2.owlCarousel({
+
+        items: 6, //10 items abo ve 1000px browser width
+        itemsDesktop: [1000, 6], //5 items between 1000px and 901px
+        itemsDesktopSmall: [900, 3], // 3 items betweem 900px and 601px
+        itemsTablet: [600, 2], //2 items between 600 and 0;
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        navText: ['.next-2', '.prev-2'],
+    });
+    // Custom Navigation Events
+    $(".next-2").click(function() {
+        owl2.trigger('owl.next');
+    })
+    $(".prev-2").click(function() {
+        owl2.trigger('owl.prev');
+    })
+    $(".play").click(function() {
+        owl.trigger('owl.play', 1000);
+    })
+    $(".stop").click(function() {
+        owl.trigger('owl.stop');
+    })
 });
