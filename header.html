@@ -14,7 +14,6 @@
 </head>
 <style>
     div {
-        display: block;
         position: relative;
     }
     
@@ -25,11 +24,8 @@
     }
     
     .top_bar {
-        width: 100%;
-        height: 56px;
-        background: #fafafa;
-        border-bottom: solid 1px rgba(0, 0, 0, 0.05);
-        z-index: 2
+        background: #478d01;
+        text-align: center;
     }
     
     .header.scrolled .top_bar {
@@ -40,60 +36,9 @@
         display: inline-block
     }
     
-    .top_bar_contact_item {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 56px;
-        margin-right: 40px
-    }
-    
-    .top_bar_contact_item:not(:first-child) {
-        margin-right: 0px
-    }
-    
-    .top_bar_contact_item a {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 56px;
-        color: #000;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .top_bar_contact_item a:hover {
-        color: #8a8a8a
-    }
-    
-    .top_bar_contact_item:last-child {
-        margin-right: 0px
-    }
-    
-    .top_bar_icon {
-        display: inline-block;
-        margin-right: 14px;
-        -webkit-transform: translateY(-2px);
-        -moz-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-        -o-transform: translateY(-2px);
-        transform: translateY(-2px)
-    }
-    
-    .top_bar_menu {
-        display: inline-block
-    }
-    
-    .top_bar_dropdown li {
-        padding-left: 13px;
-        padding-right: 13px
-    }
-    
     .standard_dropdown li {
         display: inline-block;
         position: relative;
-        height: 56px
     }
     
     .standard_dropdown li li {
@@ -120,10 +65,12 @@
     .standard_dropdown li a {
         display: block;
         position: relative;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 300;
         color: #000000;
-        line-height: 56px;
+        line-height: 30px;
+        padding: 5px 15px;
+        text-decoration: none;
         white-space: nowrap;
         -webkit-transition: all 200ms ease;
         -moz-transition: all 200ms ease;
@@ -133,17 +80,7 @@
     }
     
     .standard_dropdown li a:hover {
-        color: #0e8ce4
-    }
-    
-    .standard_dropdown li a i {
-        display: none;
-        -webkit-transform: translateY(-1px);
-        -moz-transform: translateY(-1px);
-        -ms-transform: translateY(-1px);
-        -o-transform: translateY(-1px);
-        transform: translateY(-1px);
-        font-size: 12px
+        color: #81c141
     }
     
     .standard_dropdown li ul {
@@ -151,17 +88,11 @@
         position: absolute;
         top: 120%;
         left: 0;
+        min-width: 150px;
         width: auto;
         visibility: hidden;
         opacity: 0;
         background: #FFFFFF;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
-        transition: all 0.3s ease;
-        z-index: 1
     }
     
     .standard_dropdown li:hover>ul {
@@ -175,14 +106,8 @@
         top: 0 !important
     }
     
-    .top_bar_user {
-        display: inline-block;
-        margin-left: 35px
-    }
-    
     .user_icon {
         display: inline-block;
-        margin-right: 7px;
         -webkit-transform: translateY(-2px);
         -moz-transform: translateY(-2px);
         -ms-transform: translateY(-2px);
@@ -191,52 +116,12 @@
         width: 15px
     }
     
-    .user_icon img {
-        width: 100%
-    }
-    
-    .top_bar_user div {
-        display: inline-block
-    }
-    
-    .top_bar_user div:nth-child(2) {
-        margin-right: 21px
-    }
-    
-    .top_bar_user div:nth-child(2)::after {
-        display: block;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: -13px;
-        width: 1px;
-        height: 17px;
-        background: rgba(0, 0, 0, 0.1);
-        content: ''
-    }
-    
-    .top_bar_user a {
-        font-size: 16px;
-        font-weight: 300;
-        line-height: 56px;
-        color: #000;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .top_bar_user a:hover {
-        color: #8a8a8a
-    }
-    
     .header_main {
         z-index: 1
+    }
+    
+    .header_search_form {
+        position: relative;
     }
     
     .header.scrolled .header_main {
@@ -252,96 +137,9 @@
         transform: translateY(-50%)
     }
     
-    .logo_container {
-        height: 80px
-    }
-    
-    .logo {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%)
-    }
-    
-    .logo a {
-        font-size: 36px;
-        font-weight: 500;
-        color: #0e8ce4
-    }
-    
-    .header_search {
-        height: 90px
-    }
-    
-    .header_search_content {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%)
-    }
-    
-    .header_search_form_container {
-        width: 100%;
-        height: 50px;
-        border: solid 1px #e5e5e5;
-        border-radius: 5px
-    }
-    
-    .header_search_form {
-        width: 100%;
-        height: 100%
-    }
-    
     .header_search_input {
-        display: block;
+        line-height: 40px;
         position: relative;
-        width: calc((100% - 50px) * 0.601);
-        height: 100%;
-        line-height: 50px;
-        border: none !important;
-        outline: none !important;
-        padding-left: 26px;
-        color: #7f7f7f;
-        float: left
-    }
-    
-    .header_search_input::-webkit-input-placeholder {
-        font-size: 16px !important;
-        font-weight: 300;
-        line-height: 50px;
-        color: #a3a3a3 !important
-    }
-    
-    .header_search_input:-moz-placeholder {
-        font-size: 16px !important;
-        font-weight: 300;
-        line-height: 50px;
-        color: #a3a3a3 !important
-    }
-    
-    .header_search_input::-moz-placeholder {
-        font-size: 16px !important;
-        font-weight: 300;
-        line-height: 50px;
-        color: #a3a3a3 !important
-    }
-    
-    .header_search_input:-ms-input-placeholder {
-        font-size: 16px !important;
-        font-weight: 300;
-        line-height: 50px;
-        color: #a3a3a3 !important
-    }
-    
-    .header_search_input::input-placeholder {
-        font-size: 16px !important;
-        font-weight: 300;
-        line-height: 50px;
-        color: #a3a3a3 !important
     }
     
     .custom_dropdown {
@@ -417,7 +215,6 @@
     }
     
     .custom_list li {
-        height: 35px;
         padding-left: 15px;
         padding-right: 15px;
         background: #FFFFFF
@@ -439,133 +236,12 @@
         color: #0e8ce4
     }
     
-    select {
-        display: inline;
-        border: 0;
-        width: auto;
-        margin-left: 10px;
-        outline: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        border-bottom: 2px solid #555;
-        color: #7b00ff;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out
-    }
-    
-    select:hover {
-        cursor: pointer
-    }
-    
-    select option {
-        border: 0;
-        border-bottom: 1px solid #555;
-        padding: 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none
-    }
-    
     .header_search_button {
         position: absolute;
         top: 0;
         right: 0;
         width: 50px;
         height: 100%;
-        background: #0e8ce4;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px
-    }
-    
-    .wishlist_cart {
-        height: 90px
-    }
-    
-    .wishlist {
-        margin-right: 50px
-    }
-    
-    .wishlist_icon img {
-        width: 100%
-    }
-    
-    .wishlist_content {
-        margin-left: 14px
-    }
-    
-    .wishlist_text a {
-        font-size: 18px;
-        font-weight: 400;
-        color: #000000;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .wishlist_text a:hover {
-        color: #0e8ce4
-    }
-    
-    .wishlist_count {
-        margin-top: -2px;
-        color: #a3a3a3;
-        font-size: 14px
-    }
-    
-    .cart_count {
-        position: absolute;
-        bottom: -1px;
-        right: -14px;
-        width: 23px;
-        height: 23px;
-        background: #0e8ce4;
-        border-radius: 50%;
-        text-align: center
-    }
-    
-    .cart_count span {
-        display: block;
-        line-height: 23px;
-        font-size: 12px;
-        color: #FFFFFF;
-        -webkit-transform: translateY(1px);
-        -moz-transform: translateY(1px);
-        -ms-transform: translateY(1px);
-        -o-transform: translateY(1px);
-        transform: translateY(1px)
-    }
-    
-    .cart_icon img {
-        width: 100%
-    }
-    
-    .cart_content {
-        margin-left: 28px
-    }
-    
-    .cart_text a {
-        font-size: 18px;
-        font-weight: 400;
-        color: #000000;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .cart_text a:hover {
-        color: #0e8ce4
-    }
-    
-    .cart_price {
-        font-size: 14px;
-        color: #a3a3a3;
-        margin-top: -2px
     }
     
     .main_nav {
@@ -586,9 +262,14 @@
         transition: all 200ms ease
     }
     
-    .main_nav_content {
-        width: 100%;
-        height: 60px
+    .cart_icon {
+        position: relative;
+    }
+    
+    .cart_count {
+        position: absolute;
+        top: -14px;
+        left: 16px;
     }
     
     .cat_menu_container {
@@ -722,19 +403,20 @@
         opacity: 1
     }
     
-    .main_nav_dropdown li {
-        margin-right: 35px
-    }
-    
-    .main_nav_dropdown li:last-child {
-        margin-right: 0px
-    }
-    
     .main_nav_dropdown li a {
         font-size: 18px;
         font-weight: 400;
-        color: #a19a9a;
-        line-height: 60px
+        color: #333;
+        line-height: 40px
+    }
+    
+    .main_nav_dropdown li a::after {
+        content: "|";
+        margin-left: 20px;
+    }
+    
+    .main_nav_dropdown li a:last-child:after {
+        content: " ";
     }
     
     .main_nav_dropdown li li {
@@ -914,12 +596,12 @@
         -o-transform: translateY(-2px);
         transform: translateY(-2px)
     }
-    
-    @media (min-width: 1200px) {
+    /* @media (min-width: 1200px) {
         .container {
             max-width: 1300px !important
         }
     }
+     */
     
     @media only screen and (max-width: 1199px) {
         .main_nav_dropdown li {
@@ -931,60 +613,14 @@
     }
     
     @media only screen and (max-width: 991px) {
-        .header_search {
-            height: 50px
-        }
-        .custom_dropdown {
-            text-align: left
-        }
-        .main_nav {
-            margin-top: 56px
-        }
         .main_nav_menu {
             display: none
         }
-        .logo_container,
-        .wishlist_cart {
-            height: 125px
-        }
         .main_nav_content {
-            background: #0e8ce4
+            background: #81c141
         }
         .menu_trigger_container {
             display: block
-        }
-        .top_bar {
-            height: 40px
-        }
-        .top_bar_contact_item {
-            font-size: 12px;
-            margin-right: 20px;
-            line-height: 40px
-        }
-        .top_bar_contact_item a {
-            font-size: 12px;
-            line-height: 40px
-        }
-        .top_bar_icon {
-            margin-right: 4px
-        }
-        .top_bar_icon img {
-            width: 70%
-        }
-        .top_bar_menu {
-            display: none
-        }
-        .top_bar_user a {
-            font-size: 12px;
-            line-height: 40px
-        }
-        .user_icon {
-            -webkit-transform: translateY(-1px);
-            -moz-transform: translateY(-1px);
-            -ms-transform: translateY(-1px);
-            -o-transform: translateY(-1px);
-            transform: translateY(-1px);
-            width: 12px
         }
     }
     
@@ -994,111 +630,6 @@
         }
         .page_menu_search {
             display: block
-        }
-        .main_nav {
-            margin-top: 0px
-        }
-    }
-    
-    @media only screen and (max-width: 575px) {
-        h2 {
-            font-size: 24px
-        }
-        p {
-            font-size: 13px
-        }
-        .top_bar {
-            display: none
-        }
-        .logo_container,
-        .wishlist_cart {
-            height: 72px
-        }
-        .logo a {
-            font-size: 24px
-        }
-        .cat_burger {
-            width: 16px;
-            height: 12px
-        }
-        .cat_burger span:nth-child(2) {
-            top: 5px
-        }
-        .cat_burger span:nth-child(3) {
-            top: 10px
-        }
-        .menu_trigger_text {
-            font-size: 13px;
-            margin-right: 10px
-        }
-        .wishlist {
-            margin-right: 23px
-        }
-        .wishlist_content {
-            margin-left: 6px
-        }
-        .wishlist_text {
-            display: none
-        }
-        .cart_text {
-            display: none
-        }
-        .wishlist_text a,
-        .cart_text a {
-            font-size: 14px
-        }
-        .wishlist_count,
-        .cart_price {
-            font-size: 12px
-        }
-        .wishlist_icon {
-            width: 20px
-        }
-        .cart_content {
-            margin-left: 18px
-        }
-        .cart_icon {
-            width: 17px
-        }
-        .cart_count {
-            width: 21px;
-            height: 21px
-        }
-        .cart_count span {
-            line-height: 21px
-        }
-        .top_bar_user {
-            margin-left: 0px
-        }
-        .header_search {
-            display: none
-        }
-        .main_nav {
-            width: calc(100% + 30px);
-            margin-left: -15px;
-            margin-right: -15px;
-            margin-top: 0px
-        }
-        .main_nav_content {
-            height: 35px
-        }
-        .menu_trigger_container {
-            padding-right: 15px
-        }
-        .page_menu_item>a {
-            font-size: 12px
-        }
-        .page_menu_selection li a {
-            font-size: 12px
-        }
-        .button {
-            height: 32px
-        }
-        .button a {
-            font-size: 12px;
-            line-height: 32px;
-            padding-left: 25px;
-            padding-right: 25px
         }
     }
 </style>
@@ -1112,38 +643,8 @@
             <div class="top_bar">
                 <div class="container">
                     <div class="row ">
-                        <div class="col d-flex flex-row align-items-center justify-content-center   ">
-                            <div class="top_bar_contact_item">
-                                <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>+91 9823 132 111
-                            </div>
-                            <div class="top_bar_contact_item">
-                                <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">contact@bbbootstrap.com</a>
-                            </div>
-                            <div class="top_bar_content ml-auto">
-                                <div class="top_bar_menu">
-                                    <ul class="standard_dropdown top_bar_dropdown">
-                                        <li> <a href="#">English<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">Italian</a></li>
-                                                <li><a href="#">Spanish</a></li>
-                                                <li><a href="#">Japanese</a></li>
-                                            </ul>
-                                        </li>
-                                        <li> <a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="#">EUR Euro</a></li>
-                                                <li><a href="#">GBP British Pound</a></li>
-                                                <li><a href="#">JPY Japanese Yen</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="top_bar_user">
-                                    <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
-                                    <div><a href="#">Register</a></div>
-                                    <div><a href="#">Sign in</a></div>
-                                </div>
-                            </div>
+                        <div class="d-flex flex-row align-items-center justify-content-center ">
+                            <p class="m-0 p-1 text-white">Celebrate Navratri with us & avail 15% CASHBACK up to Rs. 1500. USE CODE DURGA</p>
                         </div>
                     </div>
                 </div>
@@ -1151,20 +652,19 @@
             <!-- Header Main -->
             <div class="header_main">
                 <div class="container">
-                    <div class="row">
+                    <div class="row align-items-center justify-content-between">
                         <!-- Logo -->
-                        <div class="col-lg-2 col-sm-3 col-3 order-1">
-                            <div class="logo_container">
-                                <div class="logo"><a href="#">BBB</a></div>
-                            </div>
+                        <div class="col-lg-2 col-sm-3 col-4 order-1">
+                            <a href="#"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid "></a>
                         </div>
                         <!-- Search -->
-                        <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                        <div class="col-lg-6 offset-lg-1 col-12 order-lg-2 order-3 ">
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
-                                        <form action="#" class="header_search_form clearfix"> <input type="search" required="required" class="header_search_input" placeholder="Search for products...">
-                                            <div class="custom_dropdown" style="display: none;">
+                                        <form action="#" class="header_search_form">
+                                            <input type="search" required="required" class="header_search_input form-control rounded-0" placeholder="Search for products...">
+                                            <div class="custom_dropdown" style="display: none">
                                                 <div class="custom_dropdown_list"> <span class="custom_dropdown_placeholder clc">All Categories</span> <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
                                                         <li><a class="clc" href="#">All Categories</a></li>
@@ -1175,32 +675,35 @@
                                                         <li><a class="clc" href="#">Smartphones</a></li>
                                                     </ul>
                                                 </div>
-                                            </div> <button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                            </div>
+                                            <button type="submit" class="header_search_button btn btn-success rounded-0" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Wishlist -->
-                        <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
-                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                                <div class="wishlist d-flex flex-row align-items-center justify-content-end">
-                                    <div class="wishlist_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png" alt=""></div>
-                                    <div class="wishlist_content">
-                                        <div class="wishlist_text"><a href="#">Wishlist</a></div>
-                                        <div class="wishlist_count">10</div>
-                                    </div>
+                        <div class="col-lg-2 col-5 order-lg-3 order-2 ">
+                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-between">
+                                <div class="wishlist d-flex flex-row align-items-center ">
+                                    <ul class="standard_dropdown top_bar_dropdown p-0 m-0">
+                                        <li> <a href="login.html" class="text-decoration-none">My Account <i class="fa fa-angle-down"></i></a>
+                                            <ul class="p-0 shadow">
+                                                <li><a href="">Wishlist</a></li>
+                                                <li><a href="">My Profile</a></li>
+                                                <li><a href="reset_password.html">Change Password</a></li>
+                                                <li><a href="login.html">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <!-- Cart -->
                                 <div class="cart">
-                                    <div class="cart_container d-flex flex-row align-items-center justify-content-end">
-                                        <div class="cart_icon"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
-                                            <div class="cart_count"><span>3</span></div>
-                                        </div>
-                                        <div class="cart_content">
-                                            <div class="cart_text"><a href="#">Cart</a></div>
-                                            <div class="cart_price">$185</div>
-                                        </div>
+                                    <div class="cart_container d-flex flex-row align-items-center ">
+                                        <a href="cart.html" class="cart_icon">
+                                            <img src="assets/cart.png" alt="">
+                                            <div class="cart_count"><span class="fw-bold lead text-success">3</span></div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1212,63 +715,61 @@
             <nav class="main_nav">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
-                            <div class="main_nav_content d-flex flex-row">
-                                <!-- Categories Menu -->
-                                <!-- Main Nav Menu -->
-                                <div class="main_nav_menu">
-                                    <ul class="standard_dropdown main_nav_dropdown">
-                                        <li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
-                                        <li class="hassubs"> <a href="#">Laptop<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li> <a href="#">Lenovo<i class="fas fa-chevron-down"></i></a>
-                                                    <ul>
-                                                        <li><a href="#">Lenovo 1<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Lenovo 3<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Lenovo 2<i class="fas fa-chevron-down"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">APPLE<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">HP<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hassubs"> <a href="#">Featured Brands<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li> <a href="#">APPLE<i class="fas fa-chevron-down"></i></a>
-                                                    <ul>
-                                                        <li><a href="#">Laptop<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Mobiles<i class="fas fa-chevron-down"></i></a></li>
-                                                        <li><a href="#">Ipads<i class="fas fa-chevron-down"></i></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Samsung<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">Lenovo<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="hassubs"> <a href="#">Pages<i class="fas fa-chevron-down"></i></a>
-                                            <ul>
-                                                <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-                                                <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
-                                    </ul>
-                                </div>
-                                <!-- Menu Trigger -->
-                                <div class="menu_trigger_container ml-auto">
-                                    <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
-                                        <div class="menu_burger">
-                                            <div class="menu_trigger_text">menu</div>
-                                            <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
-                                        </div>
+                        <div class="main_nav_content ">
+                            <!-- Categories Menu -->
+                            <!-- Main Nav Menu -->
+                            <div class="main_nav_menu p-0 m-0">
+                                <ul class="standard_dropdown main_nav_dropdown p-0 m-0">
+                                    <li><a href="#">Exotic Combos</a></li>
+                                    <li class="hassubs"> <a href="#">Laptop</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li> <a href="#">Lenovo</a>
+                                                <ul class="m-0 p-0">
+                                                    <li><a href="#">Lenovo 1</a></li>
+                                                    <li><a href="#">Lenovo 3</a></li>
+                                                    <li><a href="#">Lenovo 2</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">DELL</a></li>
+                                            <li><a href="#">APPLE</a></li>
+                                            <li><a href="#">HP</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#">Featured Brands</a>
+                                        <ul>
+                                            <li> <a href="#">APPLE</a>
+                                                <ul>
+                                                    <li><a href="#">Laptop</a></li>
+                                                    <li><a href="#">Mobiles</a></li>
+                                                    <li><a href="#">Ipads</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Samsung</a></li>
+                                            <li><a href="#">Lenovo</a></li>
+                                            <li><a href="#">DELL</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="product.html">Product</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_single.html">Blog Post</a></li>
+                                            <li><a href="regular.html">Regular Post</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- Menu Trigger -->
+                            <div class="menu_trigger_container ml-auto">
+                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                    <div class="menu_burger">
+                                        <div class="menu_trigger_text">menu</div>
+                                        <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
                                     </div>
                                 </div>
                             </div>
