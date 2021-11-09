@@ -24,7 +24,7 @@
     }
     
     .top_bar {
-        background: #478d01;
+        background: #198754;
         text-align: center;
     }
     
@@ -38,7 +38,7 @@
     
     .standard_dropdown li {
         display: inline-block;
-        position: relative;
+        /* position: relative; */
     }
     
     .standard_dropdown li li {
@@ -47,10 +47,13 @@
     }
     
     .standard_dropdown li li a {
-        display: block;
+        display: flex;
+        align-items: center;
         width: 100%;
         border-bottom: solid 1px #f2f2f2;
-        font-size: 16px
+        font-size: 16px;
+        gap: 0.5rem;
+        line-height: 25px;
     }
     
     .standard_dropdown li:last-child a {
@@ -80,7 +83,7 @@
     }
     
     .standard_dropdown li a:hover {
-        color: #81c141
+        color: #198754
     }
     
     .standard_dropdown li ul {
@@ -88,8 +91,8 @@
         position: absolute;
         top: 120%;
         left: 0;
-        min-width: 150px;
-        width: auto;
+        min-width: 170px;
+        width: 100%;
         visibility: hidden;
         opacity: 0;
         background: #FFFFFF;
@@ -233,7 +236,7 @@
     }
     
     .custom_list li a:hover {
-        color: #0e8ce4
+        color: #198754
     }
     
     .header_search_button {
@@ -275,7 +278,7 @@
     .cat_menu_container {
         width: 293px;
         height: 100%;
-        background: #0e8ce4;
+        background: #198754;
         padding-left: 35px;
         cursor: pointer;
         z-index: 1
@@ -407,15 +410,15 @@
         font-size: 18px;
         font-weight: 400;
         color: #333;
-        line-height: 40px
+        line-height: 35px
     }
     
-    .main_nav_dropdown li a::after {
+    .main_nav_dropdown li .bar::after {
         content: "|";
         margin-left: 20px;
     }
     
-    .main_nav_dropdown li a:last-child:after {
+    .main_nav_dropdown li .bar-none::after {
         content: " ";
     }
     
@@ -462,7 +465,7 @@
     
     .page_menu_content {
         height: 0px;
-        background: #0e8ce4;
+        background: #198754;
         padding-left: 15px;
         padding-right: 15px;
         overflow: hidden
@@ -622,15 +625,24 @@
         .menu_trigger_container {
             display: block
         }
-    }
-    
-    @media only screen and (max-width: 767px) {
         .header_search {
             display: none
         }
         .page_menu_search {
             display: block
         }
+    }
+    
+    .menu-plant-type a .fa {
+        visibility: hidden;
+    }
+    
+    .menu-plant-type a:hover {
+        font-weight: 600;
+    }
+    
+    .menu-plant-type a:hover .fa {
+        visibility: visible;
     }
 </style>
 
@@ -652,7 +664,7 @@
             <!-- Header Main -->
             <div class="header_main">
                 <div class="container">
-                    <div class="row align-items-center justify-content-between">
+                    <div class="row align-items-center justify-content-between p-1">
                         <!-- Logo -->
                         <div class="col-lg-2 col-sm-3 col-4 order-1">
                             <a href="#"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid "></a>
@@ -683,7 +695,7 @@
                             </div>
                         </div>
                         <!-- Wishlist -->
-                        <div class="col-lg-2 col-5 order-lg-3 order-2 ">
+                        <div class="col-lg-2 col-7 order-lg-3 order-2 ">
                             <div class="wishlist_cart d-flex flex-row align-items-center justify-content-between">
                                 <div class="wishlist d-flex flex-row align-items-center ">
                                     <ul class="standard_dropdown top_bar_dropdown p-0 m-0">
@@ -721,35 +733,403 @@
                             <div class="main_nav_menu p-0 m-0">
                                 <ul class="standard_dropdown main_nav_dropdown p-0 m-0">
                                     <li><a href="#">Exotic Combos</a></li>
-                                    <li class="hassubs"> <a href="#">Laptop</a>
+                                    <li class="hassubs"> <a href="#" class="bar">Plants</a>
                                         <ul class="mega-menu p-0 m-0 shadow">
-                                            <li> <a href="#">Lenovo</a>
-                                                <ul class="m-0 p-0">
-                                                    <li><a href="#">Lenovo 1</a></li>
-                                                    <li><a href="#">Lenovo 3</a></li>
-                                                    <li><a href="#">Lenovo 2</a></li>
-                                                </ul>
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
                                             </li>
-                                            <li><a href="#">DELL</a></li>
-                                            <li><a href="#">APPLE</a></li>
-                                            <li><a href="#">HP</a></li>
                                         </ul>
                                     </li>
-                                    <li class="hassubs"> <a href="#">Featured Brands</a>
-                                        <ul>
-                                            <li> <a href="#">APPLE</a>
-                                                <ul>
-                                                    <li><a href="#">Laptop</a></li>
-                                                    <li><a href="#">Mobiles</a></li>
-                                                    <li><a href="#">Ipads</a></li>
-                                                </ul>
+                                    <li class="hassubs"> <a href="#" class="bar">Seeds</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
                                             </li>
-                                            <li><a href="#">Samsung</a></li>
-                                            <li><a href="#">Lenovo</a></li>
-                                            <li><a href="#">DELL</a></li>
                                         </ul>
                                     </li>
-                                    <li class="hassubs"> <a href="#">Pages</a>
+                                    <li class="hassubs"> <a href="#" class="bar">Pots</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Gifts</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Pebbles</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Soil/Fertilizers</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Accesories</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Services</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar-none">Decor</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="hassubs"> <a href="#" class="bar">Pages</a>
                                         <ul>
                                             <li><a href="shop.html">Shop</a></li>
                                             <li><a href="product.html">Product</a></li>
@@ -759,9 +1139,7 @@
                                             <li><a href="cart.html">Cart</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    </li> -->
                                 </ul>
                             </div>
                             <!-- Menu Trigger -->
