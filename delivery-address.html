@@ -24,7 +24,7 @@
     </nav>
     <div class="container mt-4">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 my-1">
                 <div class="bg-white p-2 mt-2">
                     <h5 class="text-success text-uppercase m-0 p-0">Add delivery address</h5>
                 </div>
@@ -48,20 +48,26 @@
                                 <label for="floatingTextarea">Address</label>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="Abc">
+                                <label for="floatingInput">Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="123454">
                                 <label for="floatingInput">City</label>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" placeholder="123456">
                                 <label for="floatingInput">Zip Code</label>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="floatingSelect" aria-label="State">
                                   <option selected>Select State</option>
                                   <option value="1">One</option>
@@ -72,7 +78,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-floating">
+                            <div class="form-floating mb-3">
                                 <select class="form-select" id="floatingSelect" aria-label="Country">
                                   <option selected>Select Country</option>
                                   <option value="1">One</option>
@@ -83,35 +89,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end mt-4">
-                        <a href="order-success.html" class="btn btn-warning text-uppercase">Save & Checkout </a>
+                    <div class="d-flex justify-content-end mt-1">
+                        <a href="order-success.html" class="btn btn-success rounded-0 text-uppercase">Save & Checkout </a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 ">
+            <div class="col-lg-4 my-1 ">
+                <div class="bg-success p-2 text-center">
+                    <h5 class="m-0 p-0 text-white">Checkout</h5>
+                </div>
                 <div class="bg-white p-2">
-                    <div class="bg-warning p-2 text-center">
-                        <h5 class="text-uppercase m-0 p-0 text-white">Price details</h5>
-                    </div>
                     <div class="d-flex align-items-center mt-2 justify-content-between">
                         <p>Price (1 item)</p>
-                        <p>Rs. 500</p>
+                        <p>₹ 500</p>
                     </div>
                     <div class="d-flex mt-1 align-items-center justify-content-between">
                         <p>Shipping</p>
-                        <p>Rs. 50</p>
+                        <p>₹ 50</p>
                     </div>
                     <div class="d-flex mt-1 align-items-center justify-content-between">
-                        <h4>Amount Payable</h4>
-                        <h4>Rs. 550</h4>
+                        <h5>Subtotal (5 items)</h5>
+                        <h5>₹ 550</h5>
                     </div>
                     <div class="d-flex mt-3 align-items-center ">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIu3hStXOtzB1GbxiCms4-IS-5LzcJoWR7Kw&usqp=CAU" class="img-fluid" width="15%">
-                        <p class="px-3 p-0 m-0">Added seeds pack worth Rs. 400</p>
+                        <p class="px-3 p-0 m-0 text-success">Added seeds pack worth ₹ 400</p>
                     </div>
-                    <div class="d-flex mt-2 align-items-center ">
-                        <input type="text">
-                        <a href="" class="text-muted text-decoration-none px-2 m-0">Apply coupon code</a>
+                    <div class="d-flex mt-2 align-items-center  ">
+                        <input type="text" placeholder="Coupon code here" class="form-control">
+                        <a href="" class="btn btn-success rounded-0 text-decoration-none px-4    m-0">Apply </a>
                     </div>
                 </div>
             </div>
