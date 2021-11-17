@@ -45,12 +45,26 @@ footer {
     background: #81c141 !important;
 }
 
+.btn-outline-success {
+    border: 1px solid #81c141 !important;
+    color: #81c141 !important;
+}
+
+.btn-outline-success:hover {
+    background: #81c141 !important;
+    color: #fff !important;
+}
+
 .btn-success {
     background: #81c141 !important;
 }
 
 .btn-success:hover {
     background: #64a81f !important;
+}
+
+.text-success {
+    color: #81c141 !important;
 }
 
 .ml-5 {
@@ -210,9 +224,22 @@ footer {
     .col-xs-6 {
         width: 50%;
     }
+    .col-xs-8 {
+        width: 60%;
+    }
     .col-xs-4 {
         width: 40%;
     }
+    .order-xs-last {
+        order: 6 !important;
+    }
+    .order-xs-first {
+        order: -1 !important;
+    }
+}
+
+.btn-light {
+    line-height: 1.4;
 }
 
 .dropdown {
