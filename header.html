@@ -24,7 +24,7 @@
     }
     
     .top_bar {
-        background: #198754;
+        background: #81c141;
         text-align: center;
     }
     
@@ -90,12 +90,18 @@
         display: block;
         position: absolute;
         top: 120%;
-        left: 0;
+        /* left: 0; */
         min-width: 170px;
-        width: 100%;
+        width: 50%;
         visibility: hidden;
         opacity: 0;
         background: #FFFFFF;
+        transition: all 500ms ease;
+    }
+    
+    .last ul {
+        right: 0;
+        left: auto;
     }
     
     .standard_dropdown li:hover>ul {
@@ -243,7 +249,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 50px;
+        width: auto;
         height: 100%;
     }
     
@@ -455,7 +461,7 @@
     }
     
     .page_menu {
-        margin-top: 15px;
+        /* margin-top: 15px; */
         -webkit-transition: all 500ms ease;
         -moz-transition: all 500ms ease;
         -ms-transition: all 500ms ease;
@@ -465,7 +471,7 @@
     
     .page_menu_content {
         height: 0px;
-        background: #198754;
+        background: #81c141;
         padding-left: 15px;
         padding-right: 15px;
         overflow: hidden
@@ -474,8 +480,8 @@
     .page_menu_search {
         display: none;
         width: 100%;
-        margin-top: 30px;
-        margin-bottom: 30px
+        margin-top: 10px;
+        margin-bottom: 10px
     }
     
     .page_menu_search_input {
@@ -501,16 +507,12 @@
         height: 50px;
         line-height: 50px;
         font-size: 14px;
-        text-transform: uppercase;
+        text-decoration: none;
         -webkit-transition: all 200ms ease;
         -moz-transition: all 200ms ease;
         -ms-transition: all 200ms ease;
         -o-transition: all 200ms ease;
         transition: all 200ms ease
-    }
-    
-    .page_menu_item>a:hover {
-        color: #b5aec4
     }
     
     .page_menu_item a i {
@@ -527,13 +529,15 @@
         width: 100%;
         height: 0px;
         overflow: hidden;
-        z-index: 1
+        z-index: 1;
+        list-style: none;
+        padding: 0;
     }
     
     .page_menu_selection li {
         padding-left: 10px;
         padding-right: 10px;
-        line-height: 50px
+        line-height: 50px;
     }
     
     .page_menu_selection li a {
@@ -541,16 +545,13 @@
         color: #FFFFFF;
         border-bottom: solid 1px rgba(255, 255, 255, 0.1);
         font-size: 14px;
-        text-transform: uppercase;
         -webkit-transition: opacity 0.3s ease;
         -moz-transition: opacity 0.3s ease;
         -ms-transition: opacity 0.3s ease;
         -o-transition: opacity 0.3s ease;
-        transition: all 0.3s ease
-    }
-    
-    .page_menu_selection li a:hover {
-        color: #b5aec4
+        transition: all 0.3s ease;
+        text-decoration: none;
+        /* font-size: 16px; */
     }
     
     .page_menu_selection li:last-child a {
@@ -666,8 +667,8 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between p-1">
                         <!-- Logo -->
-                        <div class="col-lg-2 col-sm-3 col-4 order-1">
-                            <a href="#"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid "></a>
+                        <div class="col-lg-2 col-sm-3 col-4 order-1 ">
+                            <a href="#"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid header-logo"></a>
                         </div>
                         <!-- Search -->
                         <div class="col-lg-6 offset-lg-1 col-12 order-lg-2 order-3 ">
@@ -688,7 +689,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="header_search_button btn btn-success rounded-0" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                            <button type="submit" class="header_search_button btn btn-success rounded-0 border-0" value="Submit"><img src="assets/search-icon.png" class="img-fluid" alt=""></button>
                                         </form>
                                     </div>
                                 </div>
@@ -714,7 +715,7 @@
                                     <div class="cart_container d-flex flex-row align-items-center ">
                                         <a href="cart.html" class="cart_icon">
                                             <img src="assets/cart.png" alt="">
-                                            <div class="cart_count"><span class="fw-bold lead text-success">3</span></div>
+                                            <div class="cart_count"><span class="fw-bold lead text-dark">3</span></div>
                                         </a>
                                     </div>
                                 </div>
@@ -732,12 +733,12 @@
                             <!-- Main Nav Menu -->
                             <div class="main_nav_menu p-0 m-0">
                                 <ul class="standard_dropdown main_nav_dropdown p-0 m-0">
-                                    <li><a href="#">Exotic Combos</a></li>
-                                    <li class="hassubs"> <a href="#" class="bar">Plants</a>
+                                    <!-- <li><a href="#">Exotic Combos</a></li> -->
+                                    <li class="hassubs"> <a href="#" class="bar">Exotic Combos</a>
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -749,7 +750,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
+                                                    <!-- <div class="col-md-2 border-end">
                                                         <div class="menu-plant-type">
                                                             <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 1</a>
                                                             <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 3</a>
@@ -769,8 +770,31 @@
                                                             <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 3</a>
                                                             <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 2</a>
                                                         </div>
+                                                    </div> -->
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Plants</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -781,7 +805,7 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -793,28 +817,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Seeds 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Seeds 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -825,7 +828,7 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -837,28 +840,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pots 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pots 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -869,7 +851,7 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -881,28 +863,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Gifts 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Gifts 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -913,7 +874,7 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -925,28 +886,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Pebbles 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Pebbles 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -957,7 +897,7 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -969,39 +909,18 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Soil 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Soil 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="hassubs"> <a href="#" class="bar">Accesories</a>
+                                    <li class="hassubs last"> <a href="#" class="bar">Accesories</a>
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -1013,39 +932,18 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Accesories 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Accesories 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="hassubs"> <a href="#" class="bar">Services</a>
+                                    <li class="hassubs last"> <a href="#" class="bar">Services</a>
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -1057,39 +955,18 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Services 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Services 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="hassubs"> <a href="#" class="bar-none">Decor</a>
+                                    <li class="hassubs last"> <a href="#" class="bar-none">Decor</a>
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-2 bg-light d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 bg-light d-flex justify-content-center p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
@@ -1101,28 +978,7 @@
                                                             <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 border-end">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Decor 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="menu-plant-type">
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 1</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 3</a>
-                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Decor 2</a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4 justify-content-end d-flex p-0 m-0">
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
                                                         <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
                                                     </div>
                                                 </div>
@@ -1217,14 +1073,14 @@
                                     <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
                                     <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
                                 </ul>
-                                <div class="menu_contact">
+                                <!-- <div class="menu_contact">
                                     <div class="menu_contact_item">
                                         <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570
                                     </div>
                                     <div class="menu_contact_item">
-                                        <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a>
+                                        <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:abc@gmail.com">abc@gmail.com</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

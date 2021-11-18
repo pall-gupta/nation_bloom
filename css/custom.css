@@ -176,6 +176,11 @@ footer {
     width: 10% !important;
 }
 
+.header-logo {
+    width: 80% !important;
+    padding: 0.5rem !important;
+}
+
 @media only screen and (max-width: 1450px) {
     .login {
         width: 50%;
@@ -207,6 +212,10 @@ footer {
     }
     .brand-logo {
         width: 50% !important;
+    }
+    .header-logo {
+        width: 100% !important;
+        padding: auto !important;
     }
     .main_image {
         width: auto;
