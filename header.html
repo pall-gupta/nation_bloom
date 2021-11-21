@@ -7,648 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Nation Bloom</title> -->
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 </head>
-<style>
-    div {
-        position: relative;
-    }
-    
-    .header {
-        position: relative;
-        width: 100%;
-        z-index: 10
-    }
-    
-    .top_bar {
-        background: #81c141;
-        text-align: center;
-    }
-    
-    81c141 .header.scrolled .top_bar {
-        display: none
-    }
-    
-    .top_bar_contact {
-        display: inline-block
-    }
-    
-    .standard_dropdown li {
-        display: inline-block;
-        /* position: relative; */
-    }
-    
-    .standard_dropdown li li {
-        display: block;
-        width: 100%
-    }
-    
-    .standard_dropdown li li a {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        border-bottom: solid 1px #f2f2f2;
-        font-size: 16px;
-        gap: 0.5rem;
-        line-height: 25px;
-    }
-    
-    .standard_dropdown li:last-child a {
-        border-bottom: none
-    }
-    
-    .standard_dropdown li.hassubs>a i {
-        display: inline-block;
-        margin-left: 5px
-    }
-    
-    .standard_dropdown li a {
-        display: block;
-        position: relative;
-        font-size: 18px;
-        font-weight: 400;
-        color: #000000;
-        line-height: 30px;
-        padding: 5px 15px;
-        text-decoration: none;
-        white-space: nowrap;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .standard_dropdown li a:hover {
-        color: #81c141
-    }
-    
-    .standard_dropdown li ul {
-        display: block;
-        position: absolute;
-        top: 120%;
-        /* left: 0; */
-        min-width: 170px;
-        width: 50%;
-        visibility: hidden;
-        opacity: 0;
-        background: #FFFFFF;
-        transition: all 500ms ease;
-    }
-    
-    .last ul {
-        right: 0;
-        left: auto;
-    }
-    
-    .standard_dropdown li:hover>ul {
-        top: 100%;
-        visibility: visible;
-        opacity: 1
-    }
-    
-    .standard_dropdown ul ul {
-        left: 100%;
-        top: 0 !important
-    }
-    
-    .user_icon {
-        display: inline-block;
-        -webkit-transform: translateY(-2px);
-        -moz-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-        -o-transform: translateY(-2px);
-        transform: translateY(-2px);
-        width: 15px
-    }
-    
-    .header_main {
-        z-index: 1
-    }
-    
-    .header_search_form {
-        position: relative;
-    }
-    
-    .header.scrolled .header_main {
-        display: none
-    }
-    
-    .header_main_item {
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%)
-    }
-    
-    .header_search_input {
-        line-height: 40px;
-        position: relative;
-    }
-    
-    .custom_dropdown {
-        width: calc((100% - 50px) * 0.399);
-        height: 50px;
-        float: left;
-        padding-left: 26px
-    }
-    
-    .custom_dropdown::before {
-        display: block;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        left: 0;
-        width: 1px;
-        height: 28px;
-        background: #e5e5e5;
-        content: ''
-    }
-    
-    .custom_dropdown_list i {
-        display: inline-block;
-        color: #a3a3a3;
-        font-size: 10px;
-        margin-left: 3px;
-        -webkit-transform: translateY(-1px);
-        -moz-transform: translateY(-1px);
-        -ms-transform: translateY(-1px);
-        -o-transform: translateY(-1px);
-        transform: translateY(-1px)
-    }
-    
-    .custom_dropdown_placeholder {
-        display: inline-block;
-        font-size: 16px;
-        font-weight: 300;
-        color: #a3a3a3;
-        line-height: 48px;
-        cursor: pointer
-    }
-    
-    .custom_list {
-        text-align: left;
-        position: absolute;
-        padding: 0;
-        top: 75px;
-        left: -15px;
-        visibility: hidden;
-        opacity: 0;
-        box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
-        -webkit-transition: opacity 0.2s ease;
-        -moz-transition: opacity 0.2s ease;
-        -ms-transition: opacity 0.2s ease;
-        -o-transition: opacity 0.2s ease;
-        transition: all 0.2s ease
-    }
-    
-    .custom_list.active {
-        visibility: visible;
-        opacity: 1;
-        top: 50px;
-        box-shadow: 0 0 25px rgba(63, 78, 100, 0.15);
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
-        transition: all 0.3s ease
-    }
-    
-    .custom_list li {
-        padding-left: 15px;
-        padding-right: 15px;
-        background: #FFFFFF
-    }
-    
-    .custom_list li a {
-        display: block;
-        color: #a3a3a3;
-        line-height: 35px;
-        border-bottom: solid 1px #ededed;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .custom_list li a:hover {
-        color: #198754
-    }
-    
-    .header_search_button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: auto;
-        height: 100%;
-    }
-    
-    .main_nav {
-        width: 100%;
-        border-top: solid 1px #f2f2f2;
-        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-        background: #FFFFFF
-    }
-    
-    .header.scrolled .main_nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .cart_icon {
-        position: relative;
-    }
-    
-    .cart_count {
-        position: absolute;
-        top: 0;
-        left: 25px;
-    }
-    
-    .cat_menu_container {
-        width: 293px;
-        height: 100%;
-        background: #198754;
-        padding-left: 35px;
-        cursor: pointer;
-        z-index: 1
-    }
-    
-    .cat_menu_title {
-        height: 100%
-    }
-    
-    .cat_burger {
-        width: 18px;
-        height: 14px
-    }
-    
-    .cat_burger span {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #FFFFFF
-    }
-    
-    .cat_burger span:nth-child(2) {
-        top: 6px
-    }
-    
-    .cat_burger span:nth-child(3) {
-        top: 12px
-    }
-    
-    .cat_menu_text {
-        font-size: 18px;
-        font-weight: 400;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        margin-left: 20px
-    }
-    
-    .cat_menu_container ul {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
-        transition: all 0.3s ease
-    }
-    
-    .cat_menu_container>ul {
-        padding-top: 13px
-    }
-    
-    .cat_menu_container:hover .cat_menu {
-        visibility: visible;
-        opacity: 1
-    }
-    
-    .cat_menu li {
-        display: block;
-        position: relative;
-        width: auto;
-        height: 46px;
-        border-bottom: solid 1px #f2f2f2;
-        padding-left: 35px;
-        padding-right: 30px;
-        white-space: nowrap
-    }
-    
-    .cat_menu li.hassubs>a i {
-        display: block
-    }
-    
-    .cat_menu li a {
-        display: block;
-        position: relative;
-        font-size: 16px;
-        font-weight: 300;
-        color: #000000;
-        line-height: 46px;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .cat_menu li a:hover {
-        color: #0e8ce4
-    }
-    
-    .cat_menu li a i {
-        display: none;
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 0;
-        font-size: 12px
-    }
-    
-    .cat_menu li ul {
-        display: block;
-        position: absolute;
-        top: 35px;
-        left: 100%;
-        visibility: hidden;
-        opacity: 0;
-        width: 100%;
-        background: #FFFFFF;
-        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1)
-    }
-    
-    .cat_menu li:hover>ul {
-        top: 0;
-        visibility: visible;
-        opacity: 1
-    }
-    
-    .main_nav_dropdown li a {
-        font-size: 18px;
-        font-weight: 400;
-        color: #333;
-        line-height: 35px
-    }
-    
-    .main_nav_dropdown li .bar::after {
-        content: "|";
-        margin-left: 20px;
-    }
-    
-    .main_nav_dropdown li .bar-none::after {
-        content: " ";
-    }
-    
-    .main_nav_dropdown li li {
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-right: 0px
-    }
-    
-    .menu_trigger_container {
-        display: none;
-        width: auto;
-        height: 100%;
-        padding-right: 25px;
-        padding-left: 25px;
-        cursor: pointer
-    }
-    
-    .menu_trigger {
-        height: 100%
-    }
-    
-    .menu_burger_inner {
-        display: inline-block
-    }
-    
-    .menu_trigger_text {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 400;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        margin-right: 16px
-    }
-    
-    .page_menu {
-        /* margin-top: 15px; */
-        -webkit-transition: all 500ms ease;
-        -moz-transition: all 500ms ease;
-        -ms-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease
-    }
-    
-    .page_menu_content {
-        height: 0px;
-        background: #81c141;
-        padding-left: 15px;
-        padding-right: 15px;
-        overflow: hidden
-    }
-    
-    .page_menu_search {
-        display: none;
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 10px
-    }
-    
-    .page_menu_search_input {
-        width: 100%;
-        height: 40px;
-        background: #FFFFFF;
-        border: none;
-        outline: none;
-        padding-left: 25px
-    }
-    
-    .page_menu_item {
-        display: block;
-        position: relative;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-        vertical-align: middle
-    }
-    
-    .page_menu_item>a {
-        display: block;
-        color: #FFFFFF;
-        font-weight: 500;
-        height: 50px;
-        line-height: 50px;
-        font-size: 14px;
-        text-decoration: none;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .page_menu_item a i {
-        display: none;
-        margin-left: 8px
-    }
-    
-    .page_menu_item.has-children>a>i {
-        display: inline-block
-    }
-    
-    .page_menu_selection {
-        margin: 0;
-        width: 100%;
-        height: 0px;
-        overflow: hidden;
-        z-index: 1;
-        list-style: none;
-        padding: 0;
-    }
-    
-    .page_menu_selection li {
-        padding-left: 10px;
-        padding-right: 10px;
-        line-height: 50px;
-    }
-    
-    .page_menu_selection li a {
-        display: block;
-        color: #FFFFFF;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-        font-size: 14px;
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        /* font-size: 16px; */
-    }
-    
-    .page_menu_selection li:last-child a {
-        border-bottom: none
-    }
-    
-    .menu_contact_item {
-        display: inline-block;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 56px;
-        margin-right: 40px;
-        color: #FFFFFF
-    }
-    
-    .menu_contact_item:not(:first-child) {
-        margin-right: 0px
-    }
-    
-    .menu_contact_item a {
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 56px;
-        color: #FFFFFF;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease
-    }
-    
-    .menu_contact_item a:hover {
-        color: #8a8a8a
-    }
-    
-    .menu_contact_item:last-child {
-        margin-right: 0px
-    }
-    
-    .menu_contact_icon {
-        display: inline-block;
-        margin-right: 14px;
-        -webkit-transform: translateY(-2px);
-        -moz-transform: translateY(-2px);
-        -ms-transform: translateY(-2px);
-        -o-transform: translateY(-2px);
-        transform: translateY(-2px)
-    }
-    /* @media (min-width: 1200px) {
-        .container {
-            max-width: 1300px !important
-        }
-    }
-     */
-    
-    @media only screen and (max-width: 1199px) {
-        .main_nav_dropdown li {
-            margin-right: 30px
-        }
-        .main_nav_dropdown li a {
-            font-size: 16px
-        }
-    }
-    
-    @media only screen and (max-width: 991px) {
-        .main_nav_menu {
-            display: none
-        }
-        .main_nav_content {
-            background: #81c141
-        }
-        .menu_trigger_container {
-            display: block
-        }
-        .header_search {
-            display: none
-        }
-        .page_menu_search {
-            display: block
-        }
-    }
-    
-    .menu-plant-type a .fa {
-        visibility: hidden;
-    }
-    
-    .menu-plant-type a:hover {
-        font-weight: 600;
-    }
-    
-    .menu-plant-type a:hover .fa {
-        visibility: visible;
-    }
-</style>
 
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <div class="super_container">
         <!-- Header -->
         <header class="header">
@@ -668,7 +35,7 @@
                     <div class="row align-items-center justify-content-between p-1">
                         <!-- Logo -->
                         <div class="col-lg-2 col-sm-3 col-4 order-1 ">
-                            <a href="#"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid header-logo"></a>
+                            <a href="index.html"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid header-logo"></a>
                         </div>
                         <!-- Search -->
                         <div class="col-lg-6 offset-lg-1 col-12 order-lg-2 order-3 ">
@@ -689,7 +56,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="header_search_button btn btn-success rounded-0 border-0" value="Submit"><img src="assets/search-icon.png" class="img-fluid" alt=""></button>
+                                            <button type="submit" class="d-flex header_search_button btn btn-success rounded-0 border-0" value="Submit"><img src="assets/search-icon.png" class="img-fluid" alt=""></button>
                                         </form>
                                     </div>
                                 </div>
@@ -699,15 +66,15 @@
                         <div class="col-lg-2 col-7 order-lg-3 order-2 ">
                             <div class="wishlist_cart d-flex flex-row align-items-center justify-content-between">
                                 <div class="wishlist d-flex flex-row align-items-center ">
-                                    <ul class="standard_dropdown top_bar_dropdown p-0 m-0">
+                                    <ul class="standard_dropdown top_bar_dropdown p-0 m-0 position-relative">
                                         <li> <a href="login.html" class="text-decoration-none">My Account <i class="fa fa-angle-down"></i></a>
                                             <ul class="p-0 shadow">
                                                 <li><a href="dashboard.html">Dashboard</a></li>
-                                                <li><a href="">Green Wallet</a></li>
-                                                <li><a href="">Wishlist</a></li>
-                                                <li><a href="">Order History</a></li>
-                                                <li><a href="">Earn Free Plant</a></li>
-                                                <li><a href="">Wishlist</a></li>
+                                                <li><a href="wallet.html">Green Wallet</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="order-history.html">Order History</a></li>
+                                                <li><a href="refer-earn.html">Earn Free Plant</a></li>
+                                                <li><a href="track-order.html">Track Order</a></li>
                                                 <li><a href="reset_password.html">Change Password</a></li>
                                                 <li><a href="login.html">Logout</a></li>
                                             </ul>
@@ -718,7 +85,7 @@
                                 <div class="cart">
                                     <div class="cart_container d-flex flex-row align-items-center ">
                                         <a href="cart.html" class="cart_icon">
-                                            <img src="assets/cart.png" class="img-fluid p-2" alt="">
+                                            <img src="assets/cart.png" class="" alt="">
                                             <div class="cart_count"><span class="fw-bold lead text-dark">3</span></div>
                                         </a>
                                     </div>
@@ -742,16 +109,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4 d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4 d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <!-- <div class="col-md-2 border-end">
@@ -786,16 +153,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4   d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -809,16 +176,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4   d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -832,16 +199,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4  d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -855,16 +222,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4   d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -878,16 +245,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4  d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -901,16 +268,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4   d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -924,16 +291,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4  d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -947,16 +314,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4   d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -970,16 +337,16 @@
                                         <ul class="mega-menu p-0 m-0 shadow">
                                             <li>
                                                 <div class="row bg-white p-0">
-                                                    <div class="col-md-4  d-flex justify-content-center p-0 m-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
                                                         <div class="menu-plant-type ">
                                                             <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
-                                                            <a href="#" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-8 justify-content-end d-flex p-0 m-0">
@@ -1233,5 +600,7 @@
 
     });
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 
 </html>
