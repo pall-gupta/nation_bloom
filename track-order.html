@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nation Bloom</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-light sticky-top p-1">
+        <div class="container">
+            <img src="assets/nationbloom_logo_SVG.svg" class="img-fluid brand-logo">
+        </div>
+    </nav>
+    <div class="container-fluid mt-3">
+        <div class="container">
+            <div class="row px-2 align-items-center">
+                <div class="col-sm-3 p-1">
+                    <input type="text" class="form-control rounded-0" placeholder="Tracking ID">
+                </div>
+                <div class="col-sm-2 p-1">
+                    <button class="btn btn-warning rounded-0 border-0 px-5">Track</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-2 col-xs-6 pt-1 ">
+                <img src="assets/product-img.png" class="bg-white p-1 img-fluid">
+            </div>
+            <div class="col-xs-6 ps-0 mb-track">
+                <div class="d-flex gap-2 my-3 align-items-center">
+                    <div class="track-stepper m-0">
+                    </div>
+                    <div>
+                        <small class="fw-bold m-0"> Place - 22-02-21 </small>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 my-3 align-items-center">
+                    <div class="track-stepper m-0">
+                    </div>
+                    <div>
+                        <small class="fw-bold m-0"> Shipped - 22-02-21</small>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 my-3 align-items-center">
+                    <div class="track-stepper-active m-0">
+                    </div>
+                    <div>
+                        <small class="fw-bold m-0"> In transit - 22-02-21</small>
+                    </div>
+                </div>
+                <div class="d-flex gap-2 my-3 align-items-center">
+                    <div class="track-stepper m-0">
+                    </div>
+                    <div>
+                        <small class="fw-bold m-0"> Delivered - 22-02-21</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 mb-none">
+                <div class="row ">
+                    <div class="col-md-3 pe-0">
+                        <div class="text-center">
+                            <p class="lead fw-bold m-0">Order Place</p>
+                            <small>DD/MM/YYY</small>
+                            <br>
+                            <div class="track-bar">
+                                <div class="track-stepper">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 ps-0 mb-track">
+                        <div class="d-flex gap-2 my-3 align-items-center">
+                            <div class="track-stepper m-0">
+                            </div>
+                            <div>
+                                <small class="fw-bold m-0"> Place - 22-02-21 </small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 my-3 align-items-center">
+                            <div class="track-stepper m-0">
+                            </div>
+                            <div>
+                                <small class="fw-bold m-0"> Shipped - 22-02-21</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 my-3 align-items-center">
+                            <div class="track-stepper-active m-0">
+                            </div>
+                            <div>
+                                <small class="fw-bold m-0"> In transit - 22-02-21</small>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 my-3 align-items-center">
+                            <div class="track-stepper m-0">
+                            </div>
+                            <div>
+                                <small class="fw-bold m-0"> Delivered - 22-02-21</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 px-0">
+                        <div class="text-center">
+                            <p class="lead fw-bold m-0">Ready to Ship</p>
+                            <small>DD/MM/YYY</small>
+                            <br>
+                            <div class="track-bar">
+
+                                <div class="track-stepper">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 px-0">
+                        <div class="text-center">
+                            <p class="lead fw-bold m-0">In Transit</p>
+                            <small>DD/MM/YYY</small>
+                            <br>
+                            <div class="track-bar">
+
+                                <div class="track-stepper-active">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 ps-0">
+                        <div class="text-center">
+                            <p class="lead fw-bold m-0">Delivered</p>
+                            <small>DD/MM/YYY</small>
+                            <br>
+                            <div class="track-bar">
+
+                                <div class="track-stepper">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-md-2 col-xs-6 pt-1">
+                <img src="assets/product-img.png" class="bg-white p-1 img-fluid">
+            </div>
+            <div class="col-xs-6 ps-0 mb-track">
+                <div class="d-flex gap-2 my-3 align-items-center">
+                    <div class="track-stepper-cancel m-0">
+                    </div>
+                    <div>
+                        <small class="fw-bold m-0"> Canceled - 22-02-21 </small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 mb-none">
+                <div class="row ">
+                    <div class="col-md-3 pe-0">
+                        <div class="text-center">
+                            <p class="lead fw-bold m-0">Order Place</p>
+                            <small>DD/MM/YYY</small>
+                            <br>
+                            <div class="track-bar-cancel">
+                                <div class="track-stepper-cancel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-4 ">
+                <a href="">
+                    <div class="bg-white p-1 mb-p-0 rounded-0 border">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-xs-6 pe-0">
+                                <img src="assets/offer1.png " class="img-fluid w-100 " alt="... ">
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <div>
+                                    <img class="img-fluid w-100" src="assets/offer-img.png">
+                                </div>
+                                <!-- <div class="">
+                                <h6 class="my-1">Limited time offer</h6>
+                                <h1 class="m-0">50% off</h1>
+                                <h5 class="m-0">Veg seeds pack</h5>
+                                <button type="button " class="btn btn-warning rounded-0 w-100 p-1 mt-3">Explore
+                                    more</button>
+                            </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <a href="">
+                    <div class="bg-white p-1 mb-p-0  rounded-0 border">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-xs-6 pe-0">
+                                <img src="assets/offer1.png " class="img-fluid w-100 " alt="... ">
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <div>
+                                    <img class="img-fluid w-100" src="assets/offer-img.png">
+                                </div>
+                            </div>
+                            <!-- <div class="col-lg-5 offset-lg-1 col-xs-6 ps-1">
+                            <div class="">
+                                <h6 class="my-1">Limited time offer</h6>
+                                <h1 class="m-0">50% off</h1>
+                                <h5 class="m-0">Veg seeds pack</h5>
+                                <button type="button " class="btn btn-warning rounded-0 w-100 p-1 mt-3">Explore
+                                    more</button>
+                            </div>
+                        </div> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <a href="">
+                    <div class="bg-white p-1 mb-p-0 rounded-0 border">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5 col-xs-6 pe-0">
+                                <img src="assets/offer1.png " class="img-fluid w-100 " alt="... ">
+                            </div>
+                            <div class="col-lg-6 col-xs-6 ">
+                                <div>
+                                    <img class="img-fluid w-100" src="assets/offer-img.png">
+                                </div>
+                            </div>
+                            <!-- <div class="col-lg-5 offset-lg-1 col-xs-6 ps-1">
+                            <div class="">
+                                <h6 class="my-1">Limited time offer</h6>
+                                <h1 class="m-0">50% off</h1>
+                                <h5 class="m-0">Veg seeds pack</h5>
+                                <button type="button " class="btn btn-warning rounded-0 w-100 p-1 mt-3">Explore
+                                    more</button>
+                            </div>
+                        </div> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-3 mb-none">
+            <section class="py-3 ">
+                <div class="row ">
+                    <div class="col-lg-4 text-center m-auto ">
+                        <img class="img-fluid min-h-350" src="assets/plants_simplified.png ">
+                        <h4 class="fw-bold">Plants, Simplified</h4>
+                        <p class="m-0 p-0">Order plants ready to be placed in your home, office or garden. Just Unpack, Relax and Enjoy your green buddies.</p>
+                    </div>
+                    <div class="col-lg-4 text-center m-auto ">
+                        <img class="img-fluid min-h-350" src="assets/shipping.png ">
+                        <h4 class="fw-bold">Secure Shipping</h4>
+                        <p class="m-0 p-0">Our unique packaging will hold the plants in place and let the plant breathe, so that it reaches you fresh without any mess.</p>
+                    </div>
+                    <div class="col-lg-4 text-center m-auto ">
+                        <img class="img-fluid min-h-350" src="assets/guidance.png ">
+                        <h4 class="fw-bold">Detailed Guidance</h4>
+                        <p class="m-0 p-0">Get detailed plant care instructions from the website as well as real-time guidance from our Garden Experts on Whatsapp.</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <section class="bg-white mt-3">
+        <div class="container-fluid">
+            <div class="row py-4 px-4">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-start gap-1">
+                        <img class="img-fluid" src="assets/ask_icon.png">
+                        <div class="px-2">
+                            <p>Ask any gardening related query, Get answer within 24 hours</p>
+                            <a href="" class="text-dark">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-start gap-1">
+                        <img class="img-fluid" src="assets/check_icon.png">
+                        <div class="px-2">
+                            <p>Check nursery experts recommendations, top 10 list </p>
+                            <a href="" class="text-dark">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-start gap-1">
+                        <img class="img-fluid" src="assets/web_icon.png">
+                        <div class="px-2">
+                            <p>Read customer blogs, suggestions, tips & experiences on gardening in India</p>
+                            <a href="" class="text-dark">Click here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="d-flex align-items-start gap-1">
+                        <img class="img-fluid" src="assets/tv_icon.png">
+                        <div class="px-2">
+                            <p>Learn gardening & plants care through video lessons created by garden lovers</p>
+                            <a href="" class="text-dark">Click here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-muted ">
+        <!-- Section: Links  -->
+        <section class="pt-1 ">
+            <div class="container-fluid text-center text-md-start mt-5 ">
+                <!-- Grid row -->
+                <div class="row mt-3 ">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            More about Nationbloom.com
+                        </h6>
+                        <p align="justify ">
+                            Nationbloom is a platform to address all garden related needs across india through multiple channels Our Vision to make spaces around us green & healthy place to live. Our Mission to develop an easy-to-use, affordable & quality driven platform that fulfils
+                            all gardening related needs across India.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <p class="m-0 p-0 ">Follow us on</p>
+                            <section class=" text-center ">
+                                <!-- Facebook -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-facebook-f "></i></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-google "></i></a>
+
+                                <!-- Instagram -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-instagram "></i></a>
+
+                                <!-- Linkedin -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-linkedin-in "></i></a>
+
+                                <!-- Google -->
+                                <a class="btn btn-success btn-floating rounded-circle " href="#! " role="button "><i class="fab fa-google "></i></a>
+
+                            </section>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            Let us help you
+                        </h6>
+                        <p>
+                            <a href="#! " class="text-reset ">Shipping & Delivery Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Cancellation Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Disclaimer Policy</a>
+                        </p>
+                        <p>
+                            <a href="#! " class="text-reset ">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4 ">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">
+                            Contact us
+                        </h6>
+                        <p>
+                            Mail us : support@nationbloom.com
+                        </p>
+                        <p> Call us : +91 8860 408 979</p>
+                        <p> Address : Sasane Nagar, Hadapsar, Pune - 411028
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4 ">
+                        <h6 class="text-uppercase fw-bold mb-4 text-dark ">Subscribe to get special offers!</h6>
+                        <div class="bg-success px-3 py-4 ">
+                            <div class="d-flex align-items-center gap-1 ">
+                                <img src="assets/newsletter.png ">
+                                <h4 class="text-light ">Subscribe Newsletter</h4>
+                            </div>
+                            <div class="d-flex align-items-center gap-1 p-1 mt-2 ">
+                                <input type="text " class="form-control " placeholder="Enter your email ">
+                                <button class="btn btn-dark rounded-circle shadow text-light go-btn fw-bold ">Go</button>
+                            </div>
+                        </div>
+                        <p class="mt-2 ">We absolutely promise <span class="text-uppercase ">no Spam</span></p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-success text-light ">
+            Copyright © 2017 Nationbloom. All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+<script src="//code.jquery.com/jquery-1.11.1.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+<script src="js/owl_carasual.js "></script>
+
+</html>

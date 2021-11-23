@@ -199,61 +199,6 @@ footer {
     }
 }
 
-
-/* Medium devices (tablets, 768px and up) 
-  The navbar toggle appears at this breakpoint */
-
-@media only screen and (max-width: 768px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        border-radius: 0;
-        position: fixed;
-    }
-    .mb-flex-column {
-        flex-flow: column;
-    }
-    .login {
-        width: 100%;
-        padding: 2rem;
-    }
-    .brand-logo {
-        width: 50% !important;
-    }
-    .header-logo {
-        width: 100% !important;
-        padding: auto !important;
-    }
-    .main_image {
-        width: auto;
-        height: auto;
-    }
-    .mb-none {
-        display: none;
-    }
-    .mb-p-0 {
-        padding: 0.5rem !important;
-    }
-    .mb-m-0 {
-        margin: 0 !important;
-    }
-    .col-xs-6 {
-        width: 50%;
-    }
-    .col-xs-8 {
-        width: 60%;
-    }
-    .col-xs-4 {
-        width: 40%;
-    }
-    .order-xs-last {
-        order: 6 !important;
-    }
-    .order-xs-first {
-        order: -1 !important;
-    }
-}
-
 .btn-light {
     line-height: 1.4;
 }
@@ -434,4 +379,131 @@ footer {
 
 .page-link:focus {
     box-shadow: none;
+}
+
+.lead {
+    font-weight: 4000;
+}
+
+.quantity {
+    padding: 4px;
+    /* width: 54px; */
+}
+
+.product-table {
+    width: 40%;
+    border: #333;
+}
+
+.track-stepper {
+    background: #ecebeb;
+    border: 3px solid #076507;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.track-stepper-active {
+    border: 3px solid #076507;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: #64a81f;
+}
+
+.track-stepper-cancel {
+    background: red;
+    border: 3px solid red;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.track-bar {
+    background-image: url("../assets/track-bar.png");
+    background-repeat: no-repeat;
+}
+
+.track-bar-cancel {
+    background-image: url("../assets/track-order-cancel.png");
+    background-repeat: no-repeat;
+}
+
+.mb-track {
+    display: none;
+}
+
+
+/* Medium devices (tablets, 768px and up) 
+  The navbar toggle appears at this breakpoint */
+
+@media only screen and (max-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        border-radius: 0;
+        position: fixed;
+    }
+    .mb-track {
+        display: block;
+    }
+    .mb-flex-column {
+        flex-flow: column;
+    }
+    .login {
+        width: 100%;
+        padding: 2rem;
+    }
+    .brand-logo {
+        width: 50% !important;
+    }
+    .header-logo {
+        width: 100% !important;
+        padding: auto !important;
+    }
+    .main_image {
+        width: auto;
+        height: auto;
+    }
+    .mb-none {
+        display: none;
+    }
+    .mb-p-0 {
+        padding: 0.5rem !important;
+    }
+    .mb-m-0 {
+        margin: 0 !important;
+    }
+    .col-xs-6 {
+        width: 50%;
+    }
+    .col-xs-8 {
+        width: 60%;
+    }
+    .col-xs-4 {
+        width: 40%;
+    }
+    .order-xs-last {
+        order: 6 !important;
+    }
+    .order-xs-first {
+        order: -1 !important;
+    }
+    .track-stepper {
+        width: 20px;
+        height: 20px;
+    }
+    .track-stepper-active {
+        width: 20px;
+        height: 20px;
+    }
+    .product-table {
+        width: 100%;
+    }
 }
