@@ -63,6 +63,10 @@ footer {
     background: #81c141 !important;
 }
 
+.border-success {
+    border: 1px solid #81c141 !important
+}
+
 .btn-success:hover {
     background: #64a81f !important;
 }
@@ -196,6 +200,12 @@ footer {
     .login {
         width: 80%;
         padding: 2rem;
+    }
+    .combo-scroll {
+        overflow-x: auto;
+    }
+    .combo-scroll .col {
+        min-width: 120px;
     }
 }
 
@@ -382,12 +392,19 @@ footer {
 }
 
 .lead {
-    font-weight: 4000;
+    font-weight: 400 !important;
 }
 
 .quantity {
     padding: 4px;
     /* width: 54px; */
+}
+
+.cart-qty-btn {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-table {
@@ -437,6 +454,11 @@ footer {
 
 .mb-track {
     display: none;
+}
+
+.page-item.active .page-link {
+    background: #81c141;
+    border: 1px solid #81c141
 }
 
 
@@ -496,6 +518,10 @@ footer {
         order: -1 !important;
     }
     .track-stepper {
+        width: 20px;
+        height: 20px;
+    }
+    .track-stepper-cancel {
         width: 20px;
         height: 20px;
     }
