@@ -21,173 +21,323 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-8 order-lg-first order-md-first order-sm-last order-xs-last my-1">
-                <div class="bg-white p-2 d-flex align-items-center justify-content-between">
+                <div class="bg-white p-3 d-flex align-items-center justify-content-between">
                     <div>
-                        <h5 class="m-0 p-0 text-uppercase text-success">LOGIN</h5>
+                        <h5 class="m-0 p-0 text-uppercase text-success">LOGIN <i class="fa fa-check"></i></h5>
                         <p class="m-0 p-0">Bhoomika, +91 99887 76655</p>
                     </div>
                     <div>
-                        <button class="btn btn-outline-success text-uppercase rounded-0 box-shadow-none">Change</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-success text-uppercase rounded-0 box-shadow-non ">Change</button>
                     </div>
                 </div>
 
-                <div class="bg-white p-2 d-flex align-items-center mt-2 justify-content-between mt-1">
+                <div class="bg-white p-3 mt-2 d-flex align-items-center justify-content-between">
                     <div>
-                        <h5 class="m-0 p-0 text-uppercase text-success">delivery address</h5>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                <p class="m-0 p-0"><span class="fw-bold">Pallavi </span>23, 2nd floor b/S ram rirath road, Amritsar, Punjab - 143001
-                                </p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                <p class="m-0 p-0"><span class="fw-bold">Pallavi </span>23, 2nd floor b/S ram rirath road, Amritsar, Punjab - 143001
-                                </p>
-                            </label>
-                        </div>
+                        <h5 class="m-0 p-0 text-uppercase text-success">Delivery Address <i class="fa fa-check"></i></h5>
+                        <p class="m-0 p-0"><span class="fw-bold">Pallavi </span>23, 2nd floor b/S ram rirath road, Amritsar, Punjab - 143001
+                        </p>
                     </div>
                     <div>
-                        <a href="delivery-address.html" class="btn btn-outline-success text-uppercase rounded-0 box-shadow-none">Change</a>
+                        <button class="btn btn-outline-success text-uppercase rounded-0 box-shadow-non ">Change</button>
                     </div>
                 </div>
-                <div class="bg-white p-2 mt-2">
-                    <h5 class="text-success text-uppercase m-0 p-0">order summary</h5>
+                <!------ Open this div on click of Change Address------->
+                <div class="bg-success p-3 mt-2">
+                    <h5 class="m-0 text-uppercase text-white">Delivery Address</h5>
                 </div>
-                <div class="bg-white p-2 ">
-                    <div class="row  border-bottom py-2">
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <img src="assets/pebbles.png" class="img-fluid ">
+                <div class="bg-white">
+                    <div class=" bg-light p-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                            <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault1">
+                            <div>
+                                <p><span class="fw-bold">Pallavi </span> <span class="bg-light p-1"><small class="text-muted">Home</small></span> 8872470126</p>
+                                <p>23, 2nd floor b/S ram rirath road, Amritsar, Punjab - 143001
+                                </p>
+                                <button class="btn btn-success border-0 rounded-0 mt-1 px-4 py-2">Deliver Here</button>
+                            </div>
+                            <div>
+                                <a class="text-success text-decoration-none">Edit</a>
+                            </div>
+                        </label>
                         </div>
-                        <div class="col-md-5 col-sm-8 col-xs-8">
-                            <h5 class="m-0 p-0 fw-bold">Garanium (red) - Plant</h5>
-                            <small class="text-success">In Stock</small>
-                            <div class="d-flex  gap-3 mt-2 mb-flex-column">
-                                <div class="d-flex gap-1">
-                                    <p class="m-0 p-0">Oty.</p>
-                                    <i class="fa fa-minus"></i>
-                                    <input type="text" value="2" class="mx-2 cart-qty">
-                                    <i class="fa fa-plus"></i>
+                        <!------ Open this div on click of Edit Address------->
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault3">
+                <div>
+                    <p class="text-success text-uppercase">Edit Address</p>
+                    <button class="btn btn-success border-0 rounded-0 px-3 py-2"><img src="assets/location-icon.png"> Use my current location</button>
+                    <div class="mt-3 row">
+                        <div class="col-md-10">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="name">
+                                <label for="floatingInput">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="123456789">
+                                <label for="floatingPassword">10-digit mobile number</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="143001">
+                                <label for="floatingInput">Pin Code</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="abc">
+                                <label for="floatingPassword">Locality</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Address (Area/Street)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="143001">
+                                <label for="floatingInput">City/District/Town</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                                  <option selected>Open this select menu</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                                <label for="floatingSelect">State</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInput" placeholder="143001">
+                                <label for="floatingInput">Landmark</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingPassword" placeholder="abc">
+                                <label for="floatingPassword">Alternate number (optional)</label>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Address type</label>
+                            <div class="d-flex align-items-center mt-2 justify-content-between">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                      Home (All Day Delivery)
+                                    </label>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-4">
-                                    <p class="fw-bold lead m-0 p-0">₹ 573</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                      Work (Delivery between 10 AM - 5 PM)
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row  border-bottom py-2">
-                        <div class="col-md-2 col-sm-4 col-xs-4">
-                            <img src="assets/pebbles.png" class="img-fluid ">
+                        <div class="d-flex align-items-center gap-4 mt-4">
+                            <button class="btn btn-success border-0 rounded-0 py-2 px-3">Save & Deliver Here</button>
+                            <a class="text-success text-uppercase lead text-decoration-none">Cancel</a>
                         </div>
-                        <div class="col-md-5 col-sm-8 col-xs-8">
-                            <h5 class="m-0 p-0 fw-bold">Garanium (red) - Plant</h5>
-                            <small class="text-success">In Stock</small>
-                            <div class="d-flex  gap-3 mt-2 mb-flex-column">
-                                <div class="d-flex gap-1">
-                                    <p class="m-0 p-0">Oty.</p>
-                                    <i class="fa fa-minus"></i>
-                                    <input type="text" value="2" class="mx-2 cart-qty">
-                                    <i class="fa fa-plus"></i>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-4">
-                                    <p class="fw-bold lead m-0 p-0">₹ 573</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-2 align-items-center justify-content-between">
-                        <div class="col-md-9 py-1">
-                            <p class="m-0 p-0">Order confirmed email will be sent to <span class="fw-bold">pallavigupta@gmail.com</span></p>
-                        </div>
-                        <div class="col-md-3 py-1">
-                            <a href="order-success.html" class="btn btn-warning border-0 text-uppercase rounded-0 px-5">Continue</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion mt-2" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingtwo">
-                            <button class="accordion-button collapsed text-uppercase text-success bg-white p-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <h5 class="text-uppercase m-0 p-0">Payment options</h5>
-                        </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingtwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as
-                                well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>,
-                                though the transition does limit overflow.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 order-lg-last order-md-last order-sm-first order-xs-first my-1 ">
-                <div class="bg-success p-2 text-center">
-                    <h5 class="m-0 p-0 text-white">Checkout</h5>
-                </div>
-                <div class="bg-white p-2">
-                    <div class="d-flex align-items-center mt-2 justify-content-between">
-                        <p>Price (1 item)</p>
-                        <p>₹ 500</p>
-                    </div>
-                    <div class="d-flex mt-1 align-items-center justify-content-between">
-                        <p>Shipping</p>
-                        <p>₹ 50</p>
-                    </div>
-                    <div class="d-flex mt-1 align-items-center justify-content-between">
-                        <h5>Subtotal (5 items)</h5>
-                        <h5>₹ 550</h5>
-                    </div>
-                    <!-- <div class="d-flex mt-3 align-items-center ">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIu3hStXOtzB1GbxiCms4-IS-5LzcJoWR7Kw&usqp=CAU" class="img-fluid" width="15%">
-                        <p class="px-3 p-0 m-0 text-success">Added seeds pack worth ₹ 400</p>
-                    </div> -->
-                    <div class="d-flex mt-2 align-items-center  ">
-                        <input type="text" placeholder="Coupon code here " class="rounded-0 form-control">
-                        <a href="" class="btn btn-success rounded-0 text-decoration-none px-4 border-success m-0">Apply </a>
                     </div>
                 </div>
             </div>
         </div>
+        </label>
     </div>
-    <section class="bg-white mt-3">
-        <div class="container-fluid">
-            <div class="row py-4 px-4">
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-start gap-1">
-                        <img class="img-fluid" src="assets/ask_icon.png">
-                        <div class="px-2">
+    </div>
+    </div>
+    <div class="p-3">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault2">
+                            <div>
+                                <p><span class="fw-bold">Pallavi </span> <span class="bg-light p-1"><small class="text-muted">Home</small></span> 8872470126</p>
+                                <p>23, 2nd floor b/S ram rirath road, Amritsar, Punjab - 143001
+                                </p>
+                            </div>
+                        </label>
+        </div>
+    </div>
+    </div>
+
+    <div class="bg-white p-3 d-flex align-items-center mt-2 ">
+        <a class="text-success m-0 text-decoration-none"> <i class="fa fa-plus"></i> &nbsp; Add a new address</a>
+    </div>
+
+    <div class="bg-white p-3 mt-2 d-flex align-items-center justify-content-between">
+        <div>
+            <h5 class="m-0 p-0 text-uppercase text-success">Order Summary <i class="fa fa-check"></i></h5>
+            <p class="m-0 p-0">1 Item </p>
+        </div>
+        <div>
+            <button class="btn btn-outline-success text-uppercase rounded-0 box-shadow-non ">Change</button>
+        </div>
+    </div>
+
+    <div class="bg-success p-2 mt-2">
+        <h5 class=" text-white text-uppercase m-0 p-0">order summary</h5>
+    </div>
+    <div class="bg-white p-2 ">
+        <div class="row  border-bottom py-2">
+            <div class="col-md-3 col-sm-4 col-xs-4">
+                <img src="assets/pebbles.png" class="img-fluid ">
+            </div>
+            <div class="col-md-5 col-sm-8 col-xs-8">
+                <h5 class="m-0 p-0 fw-bold">Garanium (red) - Plant</h5>
+                <small class="text-success">In Stock</small>
+                <div class="row align-items-center gap-3 mt-2">
+                    <div class="col-md-7 col-sm-6 d-flex gap-2 align-items-center">
+                        <p class="mb-0">Qty.</p>
+                        <div class="d-flex align-items-center justify-content-center border">
+                            <div class="col bg-light text-center p-1"><i class="fa fa-minus"></i></div>
+                            <div class="col text-center"><input type="text" class="p-1 form-control quantity border-0 rounded-0" value="3"></div>
+                            <div class="col bg-light text-center p-1"><i class="fa fa-plus"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-2 fw-bold lead p-0">₹ 573</p>
+                <p class="mt-3 text-decoration-none">Remove</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white p-3 mt-2 ">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-9 py-1">
+                <p class="m-0 p-0">Order confirmed email will be sent to <span class="fw-bold">pallavigupta@gmail.com</span></p>
+            </div>
+            <div class="col-md-3 py-1">
+                <a href="order-success.html" class="btn btn-success border-0 text-uppercase rounded-0 px-5">Continue</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-success p-2 mt-2">
+        <h5 class=" text-white text-uppercase m-0 p-0">payment options</h5>
+    </div>
+    <div class="bg-white p-3">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Gift cards <span class="text-muted ps-3">Available Balance Rs. 686</span>
+                </label>
+            </div>
+            <div>
+                <p class="text-warning m-0">Verify with OTP to use Gift Card Balance</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white">
+        <div class=" bg-light p-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault1">
+                <p class="m-0">UPI</p>
+            </label>
+            </div>
+        </div>
+        <div class="  p-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault1">
+                <p class="m-0">COD</p>
+            </label>
+            </div>
+        </div>
+        <div class="p-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label d-flex justify-content-between" for="flexRadioDefault1">
+                <p class="m-0">Net banking</p>
+            </label>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white p-3 d-flex align-items-center mt-2 ">
+        <a class=" m-0 text-decoration-none"> <i class="fa fa-plus"></i> &nbsp; Add Gift Card</a>
+    </div>
+    </div>
+    <div class="col-lg-4 order-lg-last order-md-last order-sm-first order-xs-first my-1 ">
+        <div class="bg-white p-3">
+            <p class="text-muted m-0 text-uppercase fw-bold">Price Details</p>
+            <hr>
+            <div class=" d-flex align-items-center mt-2 justify-content-between ">
+                <p>Price (1 item)</p>
+                <p>₹ 500</p>
+            </div>
+            <div class="d-flex mt-1 align-items-center justify-content-between ">
+                <p>Delivery Charges</p>
+                <p>₹ 50</p>
+            </div>
+            <div class="d-flex mt-1 align-items-center py-3 border-top border-bottom justify-content-between ">
+                <h5 class="m-0">Total Payable</h5>
+                <h5 class="m-0">₹ 550</h5>
+            </div>
+            <p class="text-success mt-3 mb-0 fw-bold">You will save ₹1,532 on this order</p>
+        </div>
+        <div class="bg-white p-2 px-4 mt-2 ">
+            <img class="img-fluid" src="assets/checkout.png">
+        </div>
+        <div class="d-flex gap-2 p-1 mt-2 ">
+            <img class="img-fluid " src="assets/shield.svg ">
+            <p class="text-muted m-0 ">
+                Safe and Secure Payments.Easy returns.100% Authentic products.
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    <section class="bg-white mt-3 ">
+        <div class="container-fluid ">
+            <div class="row py-4 px-4 ">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="d-flex align-items-start gap-1 ">
+                        <img class="img-fluid " src="assets/ask_icon.png ">
+                        <div class="px-2 ">
                             <p>Ask any gardening related query, Get answer within 24 hours</p>
-                            <a href="" class="text-dark">Click here</a>
+                            <a href=" " class="text-dark ">Click here</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-start gap-1">
-                        <img class="img-fluid" src="assets/check_icon.png">
-                        <div class="px-2">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="d-flex align-items-start gap-1 ">
+                        <img class="img-fluid " src="assets/check_icon.png ">
+                        <div class="px-2 ">
                             <p>Check nursery experts recommendations, top 10 list </p>
-                            <a href="" class="text-dark">Click here</a>
+                            <a href=" " class="text-dark ">Click here</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-start gap-1">
-                        <img class="img-fluid" src="assets/web_icon.png">
-                        <div class="px-2">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="d-flex align-items-start gap-1 ">
+                        <img class="img-fluid " src="assets/web_icon.png ">
+                        <div class="px-2 ">
                             <p>Read customer blogs, suggestions, tips & experiences on gardening in India</p>
-                            <a href="" class="text-dark">Click here</a>
+                            <a href=" " class="text-dark ">Click here</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="d-flex align-items-start gap-1">
-                        <img class="img-fluid" src="assets/tv_icon.png">
-                        <div class="px-2">
+                <div class="col-lg-3 col-md-6 ">
+                    <div class="d-flex align-items-start gap-1 ">
+                        <img class="img-fluid " src="assets/tv_icon.png ">
+                        <div class="px-2 ">
                             <p>Learn gardening & plants care through video lessons created by garden lovers</p>
-                            <a href="" class="text-dark">Click here</a>
+                            <a href=" " class="text-dark ">Click here</a>
                         </div>
                     </div>
                 </div>
@@ -195,6 +345,54 @@
         </div>
 
     </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
+        <div class="modal-dialog ">
+            <div class="modal-content ">
+                <div class="modal-body ">
+                    <div class="d-flex justify-content-end ">
+                        <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
+                    </div>
+                    <div class="bg-white text-center ">
+                        <img src="assets/nationbloom_logo_SVG.svg " class="img-fluid " width="30% ">
+                        <h3 class="text-capitalize pt-2 ">India's largest online nursery</h3>
+                        <form class="mt-4 ">
+                            <input type="email " class="form-control my-3 py-2 px-1 " placeholder="Email ">
+                            <input type="password " class="form-control my-3 py-2 px-1 " placeholder="Password ">
+                        </form>
+                        <div class="d-flex justify-content-between align-items-center mt-2 ">
+                            <div class="form-check ">
+                                <input class="form-check-input " type="checkbox " value=" " id="flexCheckDefault ">
+                                <label class="form-check-label text-muted " for="flexCheckDefault ">
+                                  Remember me
+                                </label>
+                            </div>
+                            <div>
+                                <a href="forgot_password.html " class="text-muted ">Forgot Password?</a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3 ">
+                            <div>
+                                <button type="submit " class="btn btn-success rounded-0 px-3 fw-bold border-0 ">Login</button>
+                                <small class="text-muted ">or login with</small>
+                            </div>
+                            <div>
+                                <button type="submit " class="btn btn-primary rounded-0 fw-bold "> <i class="fab fa-facebook-f "></i> </button>
+                                <button type="submit " class="btn btn-danger rounded-0 fw-bold "> <i class="fab fa-google "></i> </button>
+                            </div>
+                        </div>
+                        <div class="mt-5 ">
+                            <!-- <p class=" ">New to Nationbloom.com?</p> -->
+                            <a href="register.html " class="btn btn-light border rounded-0 fw-bold px-4 btn-block w-100 ">Create new account</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-muted ">
@@ -304,8 +502,11 @@
     <!-- Footer -->
 </body>
 <script src="//code.jquery.com/jquery-1.11.1.min.js "></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js " integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc " crossorigin="anonymous "></script>
 <script src="js/owl_carasual.js "></script>
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+<script src="js/owl_carasual.js "></script> -->
 
 </html>

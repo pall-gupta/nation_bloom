@@ -9,18 +9,467 @@
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
     <!-- Owl Carousel Assets -->
     <link href="assets/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="assets/owl-carousel/owl.theme.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 </head>
 
 <body>
+    <div class="super_container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top_bar mb-none">
+                <div class="container">
+                    <div class="row ">
+                        <div class="d-flex flex-row align-items-center justify-content-center ">
+                            <p class="m-0 p-1 text-white">Celebrate Navratri with us & avail 15% CASHBACK up to Rs. 1500. USE CODE DURGA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Main -->
+            <div class="header_main">
+                <div class="container">
+                    <div class="row align-items-center justify-content-between p-1">
+                        <!-- Logo -->
+                        <div class="col-lg-2 col-sm-3 col-4 order-1 ">
+                            <a href="index.html"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid header-logo"></a>
+                        </div>
+                        <!-- Search -->
+                        <div class="col-lg-6 offset-lg-1 col-12 order-lg-2 order-3 ">
+                            <div class="header_search">
+                                <div class="header_search_content">
+                                    <div class="header_search_form_container">
+                                        <form action="#" class="header_search_form">
+                                            <input type="search" required="required" class="header_search_input form-control rounded-0" placeholder="Search for products...">
+                                            <div class="custom_dropdown" style="display: none">
+                                                <div class="custom_dropdown_list"> <span class="custom_dropdown_placeholder clc">All Categories</span> <i class="fas fa-chevron-down"></i>
+                                                    <ul class="custom_list clc">
+                                                        <li><a class="clc" href="#">All Categories</a></li>
+                                                        <li><a class="clc" href="#">Computers</a></li>
+                                                        <li><a class="clc" href="#">Laptops</a></li>
+                                                        <li><a class="clc" href="#">Cameras</a></li>
+                                                        <li><a class="clc" href="#">Hardware</a></li>
+                                                        <li><a class="clc" href="#">Smartphones</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="d-flex header_search_button btn btn-success rounded-0 border-0" value="Submit"><img src="assets/search-icon.png" class="img-fluid" alt=""></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Wishlist -->
+                        <div class="col-lg-2 col-7 order-lg-3 order-2 ">
+                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-between">
+                                <div class="wishlist d-flex flex-row align-items-center ">
+                                    <ul class="standard_dropdown top_bar_dropdown p-0 m-0 position-relative">
+                                        <li> <a href="login.html" class="text-decoration-none">My Account <i class="fa fa-caret-down"></i></a>
+                                            <ul class="p-0 shadow">
+                                                <li><a href="dashboard.html">Dashboard</a></li>
+                                                <li><a href="wallet.html">Green Wallet</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="track-order.html">Track Order</a></li>
+                                                <li><a href="order-history.html">Order History</a></li>
+                                                <li><a href="refer-earn.html">Earn Free Plant</a></li>
+                                                <li><a href="reset_password.html">Change Password</a></li>
+                                                <li><a href="login.html">Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Cart -->
+                                <div class="cart">
+                                    <div class="cart_container d-flex flex-row align-items-center ">
+                                        <a href="cart.html" class="cart_icon">
+                                            <img src="assets/cart.png" class="" alt="">
+                                            <div class="cart_count"><span class="fw-bold lead text-dark">3</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Navigation -->
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_nav_content ">
+                            <!-- Categories Menu -->
+                            <!-- Main Nav Menu -->
+                            <div class="main_nav_menu p-0 m-0">
+                                <ul class="standard_dropdown main_nav_dropdown p-0 m-0">
+                                    <!-- <li><a href="#">Exotic Combos</a></li> -->
+                                    <li class="hassubs"> <a href="#" class="bar">Exotic Combos</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4 d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 border-end">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success lead"></i> Plants 2</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="menu-plant-type">
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 1</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 3</a>
+                                                            <a href="#"> <i class="fa fa-caret-right text-success"></i> Plants 2</a>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Plants</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Seeds</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Pots</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Gifts</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Pebbles</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs"> <a href="#" class="bar">Soil/Fertilizers</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs last"> <a href="#" class="bar">Accesories</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs last"> <a href="#" class="bar">Services</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4   d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="hassubs last"> <a href="#" class="bar-none">Decor</a>
+                                        <ul class="mega-menu p-0 m-0 shadow">
+                                            <li>
+                                                <div class="row bg-white p-0">
+                                                    <div class="col-md-4  d-flex p-0 m-0">
+                                                        <div class="menu-plant-type ">
+                                                            <a href="#" class="pb-3"><i class="fa fa-caret-right text-success lead"></i> By Type</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Feature</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Location</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> By Seasons</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Flowering Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Indoor Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Foliage Plants</a>
+                                                            <a href="category.html" class="pb-3"> <i class="fa fa-caret-right text-success lead"></i> Tiny Plants</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-8 justify-content-end d-flex p-0 m-0">
+                                                        <img src="assets/menu-offer.png" class="img-fluid m-0 pt-2 pe-0">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- <li class="hassubs"> <a href="#" class="bar">Pages</a>
+                                        <ul>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="product.html">Product</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_single.html">Blog Post</a></li>
+                                            <li><a href="regular.html">Regular Post</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </li> -->
+                                </ul>
+                            </div>
+                            <!-- Menu Trigger -->
+                            <div class="menu_trigger_container ml-auto">
+                                <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                    <div class="menu_burger">
+                                        <div class="menu_trigger_text">menu</div>
+                                        <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu -->
+            <div class="page_menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="page_menu_content">
+                                <div class="page_menu_search">
+                                    <form action="#"> <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products..."> </form>
+                                </div>
+                                <ul class="page_menu_nav">
+                                    <li class="page_menu_item has-children"> <a href="#">Language<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Currency<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item"> <a href="#">Home<i class="fa fa-angle-down"></i></a> </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
+                                            <li class="page_menu_item has-children"> <a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
+                                                <ul class="page_menu_selection">
+                                                    <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                    <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
+                                    <li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
+                                </ul>
+                                <!-- <div class="menu_contact">
+                                    <div class="menu_contact_item">
+                                        <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570
+                                    </div>
+                                    <div class="menu_contact_item">
+                                        <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:abc@gmail.com">abc@gmail.com</a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!--     
     <nav class="navbar navbar-expand-md navbar-dark bg-light  p-1">
         <div class="container">
             <img src="assets/nationbloom_logo_SVG.svg" class="img-fluid brand-logo">
         </div>
-    </nav>
+    </nav> -->
 
     <div class="row ">
         <img src="assets/index_banner.png " class="img-fluid w-100 " alt="Banner ">
@@ -45,7 +494,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -58,7 +507,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -71,7 +520,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -84,7 +533,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -97,7 +546,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -110,7 +559,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -123,7 +572,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                     <div class="item mx-1">
@@ -136,7 +585,7 @@
                                 <p><strong>₹ 1000</strong></p>
                                 <p class="text-muted "><strike>₹ 1200</strike></p>
                             </div>
-                            <a href="product-view.html" class="btn btn-warning btn-block w-100 border-0 rounded-0 ">Add to Cart</a>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-warning btn-block w-100 border-0 rounded-0">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -476,6 +925,40 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="d-flex justify-content-end p-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex mb-flex-column row align-items-center justify-content-center">
+                        <div class="col-md-6">
+                            <h5 class="text-dark"><i class="fa fa-check"></i> Added to Cart</h5>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-sm-4">
+                                    <img src="assets/flower1.png" class="img-fluid">
+                                </div>
+                                <div class="col-sm-6">
+                                    <p>5 Best Indoor Plants Pack</p>
+                                    <p> 1 × ₹ 1,199</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <h5> <span class="text-muted"> Cart subtotal </span>₹ 1,199 </h5>
+                            <br>
+                            <a href="cart.html" class="btn btn-light text-success border rounded-0 px-3"> View Cart (1)</a>
+                            <a href="cart.html" class="btn btn-success border-0 rounded-0 px-4"> Checkout</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="text-center text-lg-start text-muted ">
         <!-- Section: Links  -->
@@ -584,9 +1067,150 @@
     <!-- Footer -->
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script src="assets/owl-carousel/owl.carousel.js"></script>
+
+<script>
+    $(document).ready(function() {
+        "use strict";
+
+        var menuActive = false;
+        var header = $('.header');
+        setHeader();
+        initCustomDropdown();
+        initPageMenu();
+
+        function setHeader() {
+
+            if (window.innerWidth > 991 && menuActive) {
+                closeMenu();
+            }
+        }
+
+        function initCustomDropdown() {
+            if ($('.custom_dropdown_placeholder').length && $('.custom_list').length) {
+                var placeholder = $('.custom_dropdown_placeholder');
+                var list = $('.custom_list');
+            }
+
+            placeholder.on('click', function(ev) {
+                if (list.hasClass('active')) {
+                    list.removeClass('active');
+                } else {
+                    list.addClass('active');
+                }
+
+                $(document).one('click', function closeForm(e) {
+                    if ($(e.target).hasClass('clc')) {
+                        $(document).one('click', closeForm);
+                    } else {
+                        list.removeClass('active');
+                    }
+                });
+
+            });
+
+            $('.custom_list a').on('click', function(ev) {
+                ev.preventDefault();
+                var index = $(this).parent().index();
+
+                placeholder.text($(this).text()).css('opacity', '1');
+
+                if (list.hasClass('active')) {
+                    list.removeClass('active');
+                } else {
+                    list.addClass('active');
+                }
+            });
+
+
+            $('select').on('change', function(e) {
+                placeholder.text(this.value);
+
+                $(this).animate({
+                    width: placeholder.width() + 'px'
+                });
+            });
+        }
+
+        /*
+
+        4. Init Page Menu
+
+        */
+
+        function initPageMenu() {
+            if ($('.page_menu').length && $('.page_menu_content').length) {
+                var menu = $('.page_menu');
+                var menuContent = $('.page_menu_content');
+                var menuTrigger = $('.menu_trigger');
+
+                //Open / close page menu
+                menuTrigger.on('click', function() {
+                    if (!menuActive) {
+                        openMenu();
+                    } else {
+                        closeMenu();
+                    }
+                });
+
+                //Handle page menu
+                if ($('.page_menu_item').length) {
+                    var items = $('.page_menu_item');
+                    items.each(function() {
+                        var item = $(this);
+                        if (item.hasClass("has-children")) {
+                            item.on('click', function(evt) {
+                                evt.preventDefault();
+                                evt.stopPropagation();
+                                var subItem = item.find('> ul');
+                                if (subItem.hasClass('active')) {
+                                    subItem.toggleClass('active');
+                                    TweenMax.to(subItem, 0.3, {
+                                        height: 0
+                                    });
+                                } else {
+                                    subItem.toggleClass('active');
+                                    TweenMax.set(subItem, {
+                                        height: "auto"
+                                    });
+                                    TweenMax.from(subItem, 0.3, {
+                                        height: 0
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            }
+        }
+
+        function openMenu() {
+            var menu = $('.page_menu');
+            var menuContent = $('.page_menu_content');
+            TweenMax.set(menuContent, {
+                height: "auto"
+            });
+            TweenMax.from(menuContent, 0.3, {
+                height: 0
+            });
+            menuActive = true;
+        }
+
+        function closeMenu() {
+            var menu = $('.page_menu');
+            var menuContent = $('.page_menu_content');
+            TweenMax.to(menuContent, 0.3, {
+                height: 0
+            });
+            menuActive = false;
+        }
+
+
+    });
+</script>
+<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js "></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 <script src="js/owl_carasual.js "></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script> -->
+<script src="assets/owl-carousel/owl.carousel.js"></script>
 
 </html>

@@ -45,6 +45,11 @@ footer {
     background: #81c141 !important;
 }
 
+.form-check-input:checked {
+    background-color: #81c141;
+    border-color: #81c141;
+}
+
 .btn-light:hover {
     background-color: #e3e3e3;
 }
