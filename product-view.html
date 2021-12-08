@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="p-3 right-side">
-                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <nav class="mb-none" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Plants</a></li>
@@ -52,7 +52,10 @@
                         </nav>
                         <div class="d-flex justify-content-between align-items-center ">
                             <h3 class="m-0">IIlana</h3>
-                            <!-- <span class="heart " title="Add to Wishlist "><i class="fa fa-heart "></i></span> -->
+                            <div class="d-flex">
+                                <span class="heart text-success" title="Add to Wishlist "><i class="fa fa-heart "></i></span>
+                                <span class="heart text-success" title="Share"><i class="fa fa-share-alt "></i></span>
+                            </div>
                         </div>
                         <div class="ratings d-flex flex-row align-items-center my-3">
                             <div class="d-flex flex-row"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> </div> <span>441 reviews</span>
@@ -64,13 +67,14 @@
                                         <span class="bg-success p-2 text-white lead"> Save <span class="fw-bold">40%</span></span>
                                     </div>
                                     <div class="ps-3">
-                                        <h4 class="text-muted fw-bold m-0"><strike>₹578</strike></h4>
+                                        <h4 class="text-muted m-0"><strike>₹578</strike></h4>
                                     </div>
+                                    <h4 class="text-dark fw-bold m-0 desk-none ps-3">₹399</h4>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 my-3">
+                            <div class="col-lg-6 col-md-12 my-1">
                                 <div class="d-flex align-items-center gap-1">
-                                    <h4 class="text-dark fw-bold m-0">₹399</h4>
+                                    <h4 class="text-dark mb-none fw-bold m-0">₹399</h4>
                                     <small>(MRP inclusive of all the taxes)</small>
                                 </div>
                             </div>
@@ -178,7 +182,7 @@
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Ratings & Review</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Related Blogs</button>
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Blogs</button>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -272,16 +276,16 @@
 
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="ratings d-flex  align-items-center gap-3 my-3 justify-content-between mb-flex-column">
-                            <div class="d-flex align-items-center gap-2 ">
-                                <h3 class="m-0">4.7</h3>
-                                <div class="d-flex flex-row"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> </div>
-                                <p class="m-0">441 reviews</p>
-                            </div>
-                            <div>
-                                <a href="" class="btn btn-success rounded-0 border-0 px-3 lead"><i class="fa fa-pencil-alt"></i> Write a review</a>
-                            </div>
+                    <div class="ratings d-flex  align-items-center gap-3 my-3 justify-content-between mb-flex-column">
+                        <div class="d-flex align-items-center gap-2 ">
+                            <h3 class="m-0">4.7</h3>
+                            <div class="d-flex flex-row"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> </div>
+                            <p class="m-0">441 reviews</p>
                         </div>
+                        <div>
+                            <a href="" class="btn btn-success rounded-0 border-0 px-3 lead"><i class="fa fa-pencil-alt"></i> Write a review</a>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-1 pe-0 mb-none">
                             <div class="bg-success p-2 d-flex align-items-center justify-content-center" style="width: 50px;">
@@ -318,33 +322,35 @@
                     </nav>
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="row mt-3">
-                        <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-4  mt-3">
                             <img src="assets/blogging.jpg" class="img-fluid w-100">
                             <h3 class="fw-bold mt-3 mb-0">Blog Head</h3>
                             <p class="text-muted">content writer name</p>
                             <p class="my-4 lead">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             </p>
-                            <a href="" class="fw-bold text-dark lead">Read more</a>
+                            <a href="blog-view.html" class="btn btn-warning rounded-0 border-0">Read more</a>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4  mt-3">
                             <img src="assets/blogging.jpg" class="img-fluid w-100">
                             <h3 class="fw-bold mt-3 mb-0">Blog Head</h3>
                             <p class="text-muted">content writer name</p>
                             <p class="my-4 lead">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             </p>
-                            <a href="" class="fw-bold text-dark lead">Read more</a>
+                            <a href="blog-view.html" class="btn btn-warning rounded-0 border-0">Read more</a>
+
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4  mt-3">
                             <img src="assets/blogging.jpg" class="img-fluid w-100">
                             <h3 class="fw-bold mt-3 mb-0">Blog Head</h3>
                             <p class="text-muted">content writer name</p>
                             <p class="my-4 lead">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                             </p>
-                            <a href="" class="fw-bold text-dark lead">Read more</a>
+                            <a href="blog-view.html" class="btn btn-warning rounded-0 border-0">Read more</a>
+
                         </div>
                     </div>
                 </div>
@@ -353,12 +359,10 @@
         </div>
     </div>
     <div class="mt-4">
-        <div class="container-fluid bg-success p-2">
-            <div class="container">
+        <div class="container mt-3">
+            <div class="bg-success p-2">
                 <h4 class="text-white fw-bold m-0">Frequently Brought Together</h4>
             </div>
-        </div>
-        <div class="container mt-3">
             <div class="d-flex align-items-center combo-scroll px-0 mt-3">
                 <div class="col">
                     <img src="assets/flower1.png" class="img-fluid p-1 bg-white">
@@ -410,15 +414,16 @@
                 </div>
                 <div class="row align-items-center mb-3">
                     <div class="col-lg-6">
-                        <div class="d-flex align-items-center mb-flex-column">
+                        <div class="d-flex align-items-center ">
                             <div class="mt-3">
-                                <span class="bg-success p-2 text-white lead"> Save <span class="fw-bold">40%</span></span>
+                                <span class="bg-success p-2  text-white lead"> Save <span class="fw-bold">40%</span></span>
                             </div>
                             <div class="px-2 mt-3 d-flex align-items-center">
-                                <h4 class="fw-bold m-0"><strike class="text-muted pe-2">₹578</strike>Rs. 300 </h4>
-                                <small class="px-2">Inc. of all taxes</small>
+                                <h4 class="m-0"><strike class="text-muted pe-3">₹578</strike>Rs. 300 </h4>
+                                <small class="px-2 mb-none">Inc. of all taxes</small>
                             </div>
                         </div>
+                        <p class="mt-2 desk-none text-center">Inc. of all taxes</p>
                         <a href="combo.html" class="btn btn-success border-0 rounded-0 w-100 mt-3">Add Combo to Cart</a>
                     </div>
                 </div>

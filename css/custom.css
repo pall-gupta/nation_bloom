@@ -466,6 +466,14 @@ footer {
     border: 1px solid #81c141
 }
 
+.desk-none {
+    display: none !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "|";
+}
+
 
 /* Medium devices (tablets, 768px and up) 
   The navbar toggle appears at this breakpoint */
@@ -476,6 +484,9 @@ footer {
         margin-top: 0;
         border-radius: 0;
         position: fixed;
+    }
+    .desk-none {
+        display: block !important;
     }
     .mb-track {
         display: block;
