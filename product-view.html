@@ -26,15 +26,23 @@
             <div class="row g-0">
                 <div class="col-md-4  p-0">
                     <div class="d-flex flex-column justify-content-center">
+                        <nav class="desk-none px-2" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Plants</a></li>
+                                <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Flowering Plants</a></li>
+                                <li class="breadcrumb-item active text-success" aria-current=" page ">Plants</li>
+                            </ol>
+                        </nav>
                         <div class="main_image pt-2 px-2 mb-p-0">
                             <img src="assets/product-img.png" id="main_product_image" class="img-fluid p-2 bg-white border-0" width="500">
                         </div>
                         <div class="thumbnail_images">
                             <ul id="thumbnail ">
-                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/flower1.png" width="95"></li>
-                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/offer1.png" width="95"></li>
-                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/flower1.png" width="95"></li>
-                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/offer1.png" width="95"></li>
+                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/flower1.png" width="99"></li>
+                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/offer1.png" width="99"></li>
+                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/flower1.png" width="99"></li>
+                                <li class="m-1"><img onclick="changeImage(this)" class="img-fluid" src="assets/offer1.png" width="99"></li>
                             </ul>
                         </div>
                         <small class="text-danger"><span class="fw-bold">Note</span>The image is for refrence purpose</small>
@@ -53,18 +61,18 @@
                         <div class="d-flex justify-content-between align-items-center ">
                             <h3 class="m-0">IIlana</h3>
                             <div class="d-flex">
-                                <span class="heart text-success" title="Add to Wishlist "><i class="fa fa-heart "></i></span>
-                                <span class="heart text-success" title="Share"><i class="fa fa-share-alt "></i></span>
+                                <a href="" class="heart text-success" title="Add to Wishlist "><i class="fa fa-heart "></i></a>
+                                <a href="" class="heart text-success" title="Share"><i class="fa fa-share-alt "></i></a>
                             </div>
                         </div>
-                        <div class="ratings d-flex flex-row align-items-center my-3">
+                        <div class="ratings d-flex flex-row align-items-center mt-3 ">
                             <div class="d-flex flex-row"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i> </div> <span>441 reviews</span>
                         </div>
                         <div class="row align-items-center my-3">
                             <div class="col-lg-4 col-md-12 col-xs-12 pe-0 my-3">
                                 <div class="d-flex align-items-center ">
                                     <div>
-                                        <span class="bg-success p-2 text-white lead"> Save <span class="fw-bold">40%</span></span>
+                                        <span class="bg-success p-2 mb-p-0 text-white lead"> Save <span class="fw-bold">40%</span></span>
                                     </div>
                                     <div class="ps-3">
                                         <h4 class="text-muted m-0"><strike>₹578</strike></h4>
@@ -116,8 +124,8 @@
                             </div>
                         </div>
                         <div class="my-4">
-                            <p class="m-0">Rs. 79 delivery charges on your lcoation</p>
-                            <p class="m-0 fw-bold">*Item will be shipped by 7-10 days</p>
+                            <small class="m-0">Rs. 79 delivery charges on your lcoation</small><br>
+                            <small class="m-0 fw-bold">*Item will be shipped by 7-10 days</small>
                         </div>
                         <div class="mt-4">
                             <a href="cart.html" class="btn btn-success border-0 w-100 rounded-0 btn-block  ">Add to Cart</a>
@@ -140,7 +148,7 @@
         </div>
         <div>
             <h4 class=" fw-bold">About Plant Name</h4>
-            <p class="lead">They look smaller than the picture shows, please check the given approx. product size. Keep it away from the children under 3 years, these items are not edible. </p>
+            <p>They look smaller than the picture shows, please check the given approx. product size. Keep it away from the children under 3 years, these items are not edible. </p>
         </div>
 
         <table class="table table-bordered product-table">
@@ -179,7 +187,7 @@
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Plants Details</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Ratings & Review</button>
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"> Review</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Blogs</button>
@@ -195,8 +203,8 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mt-3">
@@ -204,8 +212,8 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mt-3">
@@ -213,8 +221,8 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mt-3">
@@ -222,8 +230,8 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mt-3">
@@ -231,8 +239,8 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-4 mt-3">
@@ -240,35 +248,35 @@
                                     <i class="fa fa-certificate display-6"></i>
                                 </div>
                                 <div>
-                                    <p class="m-0 fw-bold lead text-dark">Sunlight</p>
-                                    <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                    <p class="m-0 fw-bold text-dark">Sunlight</p>
+                                    <p class="m-0 text-dark">Bright indirect Sunlight</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                             <div class="mt-3">
-                                <p class="m-0 fw-bold lead text-dark">Common Name</p>
-                                <p class="m-0 lead text-dark">Bright indirect Sunlight</p>
+                                <p class="m-0 fw-bold text-dark">Common Name</p>
+                                <p class="m-0 text-dark">Bright indirect Sunlight</p>
                             </div>
                         </div>
 
@@ -416,10 +424,11 @@
                     <div class="col-lg-6">
                         <div class="d-flex align-items-center ">
                             <div class="mt-3">
-                                <span class="bg-success p-2  text-white lead"> Save <span class="fw-bold">40%</span></span>
+                                <span class="bg-success p-2 mb-p-0 text-white lead"> Save <span class="fw-bold">40%</span></span>
                             </div>
                             <div class="px-2 mt-3 d-flex align-items-center">
-                                <h4 class="m-0"><strike class="text-muted pe-3">₹578</strike>Rs. 300 </h4>
+                                <p class="lead m-0"><strike class="text-muted  px-3">₹578</strike></p>
+                                <h4 class="m-0 fw-bold">Rs. 300 </h4>
                                 <small class="px-2 mb-none">Inc. of all taxes</small>
                             </div>
                         </div>

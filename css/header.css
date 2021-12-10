@@ -296,7 +296,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: #FFFFFF
+        background: #000
     }
     
     .cat_burger span:nth-child(2) {
@@ -626,6 +626,9 @@
         }
         .standard_dropdown li a {
             font-size: 16px;
+        }
+        .standard_dropdown {
+            display: none !important;
         }
     }
     

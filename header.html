@@ -33,8 +33,16 @@
             <div class="header_main">
                 <div class="container">
                     <div class="row align-items-center justify-content-between p-1">
+                        <!-- Menu Trigger -->
+                        <div class="menu_trigger_container col-4 ml-auto">
+                            <div class="menu_trigger ">
+                                <div class="menu_burger">
+                                    <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- Logo -->
-                        <div class="col-lg-2 col-sm-3 col-4 order-1 ">
+                        <div class="col-lg-2 col-sm-6 col-6 order-1 ">
                             <a href="index.html"><img src="assets/nationbloom_logo_SVG.svg" class="img-fluid header-logo"></a>
                         </div>
                         <!-- Search -->
@@ -63,9 +71,9 @@
                             </div>
                         </div>
                         <!-- Wishlist -->
-                        <div class="col-lg-2 col-7 order-lg-3 order-2 ">
+                        <div class="col-lg-2 col-2 order-lg-3 order-2 ">
                             <div class="wishlist_cart d-flex flex-row align-items-center justify-content-between">
-                                <div class="wishlist d-flex flex-row align-items-center ">
+                                <div class="wishlist d-flex flex-row align-items-center mb-none">
                                     <ul class="standard_dropdown top_bar_dropdown p-0 m-0 position-relative">
                                         <li> <a href="login.html" class="text-decoration-none">My Account <i class="fa fa-angle-down"></i></a>
                                             <ul class="p-0 shadow">
@@ -370,14 +378,14 @@
                                 </ul>
                             </div>
                             <!-- Menu Trigger -->
-                            <div class="menu_trigger_container ml-auto">
+                            <!-- <div class="menu_trigger_container ml-auto">
                                 <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
                                     <div class="menu_burger">
                                         <div class="menu_trigger_text">menu</div>
                                         <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -388,10 +396,22 @@
                     <div class="row">
                         <div class="col">
                             <div class="page_menu_content">
-                                <div class="page_menu_search">
+                                <!-- <div class="page_menu_search">
                                     <form action="#"> <input type="search" required="required" class="page_menu_search_input" placeholder="Search for products..."> </form>
-                                </div>
+                                </div> -->
                                 <ul class="page_menu_nav">
+                                    <li class="page_menu_item has-children"> <a href="#">My Account<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="dashboard.html">Dashboard</a></li>
+                                            <li><a href="wallet.html">Green Wallet</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="track-order.html">Track Order</a></li>
+                                            <li><a href="order-history.html">Order History</a></li>
+                                            <li><a href="refer-earn.html">Earn Free Plant</a></li>
+                                            <li><a href="reset_password.html">Change Password</a></li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </li>
                                     <li class="page_menu_item has-children"> <a href="#">Language<i class="fa fa-angle-down"></i></a>
                                         <ul class="page_menu_selection">
                                             <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
@@ -456,6 +476,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="desk-none">
+                <form action="#" class="header_search_form">
+                    <input type="search" required="required" class="header_search_input form-control rounded-0" placeholder="Search for products...">
+                    <button type="submit" class="d-flex header_search_button btn btn-success rounded-0 border-0" value="Submit"><img src="assets/search-icon.png" class="img-fluid" alt=""></button>
+                </form>
             </div>
         </header>
         <div style="height: 700px"> </div>
